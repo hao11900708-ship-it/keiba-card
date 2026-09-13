@@ -1,373 +1,397 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中山 2026/09/13 AI予想</title>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中山 09/13 AI予想</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;padding:10px 8px 40px;background:#12161d;color:#e6ecf3;
-     font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
-     font-size:14px;line-height:1.5}
-h1{font-size:18px;margin:4px 0 10px}
-.vnav{margin:6px 0 14px}
-.vtab{display:inline-block;padding:5px 13px;margin:0 6px 6px 0;border-radius:13px;
-      background:#1e2530;color:#7cc9ff;text-decoration:none;font-size:13px}
-.vtab.on{background:#2f6ea8;color:#fff}
-.race{background:#171d26;border:1px solid #263040;border-radius:10px;
-      margin:0 0 16px;padding:10px 10px 8px}
-.rh{font-size:15px;font-weight:700;margin:0 0 4px}
-.rh .no{color:#7cc9ff;margin-right:6px}
-.rsub{font-size:12px;color:#9fb0c3;margin:0 0 6px}
-.pace{font-size:12px;color:#cfe3f5;background:#1d2735;border-radius:6px;
-      padding:5px 8px;margin:0 0 7px}
-.pace b{color:#ffd479;font-weight:700}
-.warn{font-size:12px;color:#ffcf8a;background:#2a2418;border-left:3px solid #c98b1e;
-      border-radius:4px;padding:5px 8px;margin:0 0 7px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{background:#1c2432;color:#9fb0c3;font-size:11px;font-weight:600;
-   padding:4px 3px;border-bottom:1px solid #2b3442;white-space:nowrap}
-td{padding:5px 3px;border-bottom:1px solid #212a36;vertical-align:middle}
+body{margin:0;padding:0 0 40px;background:#0f1115;color:#e8eaf0;
+     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+     font-size:15px;line-height:1.5}
+header{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.97);
+       backdrop-filter:blur(6px);border-bottom:1px solid #262b36;padding:9px 12px 7px}
+h1{font-size:16px;margin:0 0 6px}
+.vnav{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 7px}
+.vtab{padding:5px 13px;border:1px solid #3a4152;border-radius:8px;color:#4da3ff;
+      text-decoration:none;font-size:13px;background:#1f2634;font-weight:600}
+.vtab.on{background:#2f6ea8;color:#fff;border-color:#2f6ea8}
+.rnav{display:flex;gap:5px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+      padding-bottom:2px}
+.rnav a{flex:0 0 auto;min-width:32px;text-align:center;padding:4px 6px;
+        border:1px solid #262b36;border-radius:7px;background:#171a21;
+        color:#e8eaf0;text-decoration:none;font-size:12.5px;font-weight:600}
+.rnav a.g{border-color:#4a3d22;color:#e0c88a}
+.wrap{padding:10px}
+.race{background:#171a21;border:1px solid #262b36;border-radius:12px;
+      margin:0 0 13px;padding:11px 11px 9px;scroll-margin-top:96px}
+.rh{font-size:15px;font-weight:700;margin:0 0 3px}
+.rh .no{color:#4da3ff;margin-right:6px}
+.meta{font-size:12px;color:#98a0b3;margin:0 0 6px}
+.pill{display:inline-block;margin:0 5px 5px 0;padding:2px 9px;border-radius:999px;
+      background:#1f2634;color:#4da3ff;font-size:12px;font-weight:600}
+.pill.lap{background:#1c2a22;color:#6ddba0}
+.pill.na{background:#2a2530;color:#b9a7c9}
+.warn{font-size:12px;color:#ffd166;background:#2a2412;border-left:3px solid #5a4a1d;
+      border-radius:5px;padding:6px 9px;margin:5px 0 7px;line-height:1.5}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
+th{background:#1c2029;color:#98a0b3;font-size:11px;font-weight:600;
+   padding:5px 3px;border-bottom:1px solid #262b36;white-space:nowrap}
+td{padding:6px 3px;border-bottom:1px solid #1e232c;vertical-align:middle}
 td.mk{font-family:"Hiragino Sans","Noto Sans JP","Apple Symbols","Segoe UI Symbol",sans-serif;
-      font-size:16px;font-weight:700;letter-spacing:0;text-align:center;width:44px;
-      white-space:nowrap;color:#ffd479}
-td.mk.nb{color:#7f8b99;font-size:11px;font-weight:400}
-td.no{text-align:center;width:26px;color:#c8d4e0}
-td.nm{font-weight:600}
-td.nm small{display:block;font-weight:400;font-size:11px;color:#8fa0b3}
+      font-size:17px;font-weight:700;text-align:center;width:42px;white-space:nowrap;
+      color:#4da3ff;line-height:1.2}
+td.mk.nb{color:#7a8296;font-size:11px;font-weight:400}
+td.mk .sub{display:block;font-size:9.5px;color:#98a0b3;font-weight:400}
+td.no{text-align:center;width:26px;color:#cfd6e6}
+td.nm{font-weight:700;min-width:104px}
+td.nm small{display:block;font-weight:400;font-size:11px;color:#98a0b3}
 td.r{text-align:right;white-space:nowrap}
-.ref{color:#8fa0b3;font-size:11px}
-tr.hi td{background:#1b2532}
+.ref{color:#98a0b3;font-size:10.5px}
+tr.hi td{background:#191f2b}
 tr.dim td{color:#8290a0}
-tr.cmt td{border-bottom:1px solid #212a36;font-size:12px;color:#b9c8d8;
-          padding:2px 6px 8px;line-height:1.45}
-.tags{margin:6px 0 0}
-.tag{display:inline-block;font-size:11px;padding:2px 7px;margin:0 4px 4px 0;
-     border-radius:9px;background:#22303f;color:#9fd2ff}
-.tag.v{background:#2c2a18;color:#ffd479}
-footer{font-size:11px;color:#7f8b99;margin:18px 4px;line-height:1.7}
-</style><link rel="manifest" href="/keiba-card/manifest.json"><link rel="apple-touch-icon" href="/keiba-card/icon.svg"><meta http-equiv="Cache-Control" content="no-cache"></head><body><div class="vnav"><b style="color:#e6ecf3">AI予想</b>&nbsp;<a class="vtab on" href="nakayama.html">中山</a><a class="vtab" href="hanshin.html">阪神</a></div><h1>中山 9月13日</h1><div class="race">
+tr.ex td{border-bottom:1px solid #1e232c;padding:0 6px 8px}
+.cmt{font-size:12.5px;color:#c9cfdd;line-height:1.55;margin:2px 0 0}
+.lt{display:inline-block;margin:3px 4px 0 0;padding:1px 7px;border-radius:6px;
+    background:#1c2a22;border:1px solid #2c4636;color:#9fd9bb;font-size:11px}
+.lt.bb{background:#2b2418;border-color:#4a3d22;color:#e0c88a}
+.tags{margin:7px 0 0}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;margin:0 4px 4px 0;
+     border-radius:9px;background:#20242e;border:1px solid #262b36;color:#9fd2ff}
+.tag.v{background:#2b2418;border-color:#4a3d22;color:#e0c88a}
+.top{display:block;text-align:right;font-size:11px;color:#98a0b3;
+     text-decoration:none;margin:4px 2px 0}
+footer{padding:16px 12px;color:#98a0b3;font-size:11.5px;line-height:1.8}
+</style><link rel="manifest" href="/keiba-card/manifest.json"><link rel="apple-touch-icon" href="/keiba-card/icon.svg"><meta http-equiv="Cache-Control" content="no-cache"></head><body id="top"><header><h1>中山 9月13日</h1><div class="vnav"><a class="vtab on" href="nakayama.html">中山</a><a class="vtab" href="hanshin.html">阪神</a><a class="vtab" href="archive.html">過去</a></div><div class="rnav"><a href="#r1">1</a><a href="#r2">2</a><a href="#r3">3</a><a href="#r4">4</a><a href="#r5">5</a><a href="#r6">6</a><a href="#r7">7</a><a href="#r8">8</a><a href="#r9">9</a><a href="#r10">10</a><a href="#r11" class="g">11</a><a href="#r12">12</a></div></header><div class="wrap"><div class="race" id="r1">
 <div class="rh"><span class="no">1R</span>障害3歳以上未勝利</div>
-<div class="rsub">未勝利 / 2880m / 芝 / 10頭</div>
-<div class="pace"><b>想定ペース</b> ややS<br><b>ラップ傾向</b> — / — / — / —<br><b>馬場</b> 1/7</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">5</td><td class="no">5</td><td class="nm">セイウンビッグバン<small>牡4 60.0kg</small></td><td>伴 啓太</td><td class="r">3.7</td><td class="r">1</td><td class="r">29.5%</td><td class="r">73.5%</td><td class="r">2.45倍</td><td class="r">1.09</td></tr>
-<tr class="cmt"><td></td><td colspan="10">展開面の減点を受けてなお勝率29%で最上位、地力で押し切る形。中団から運ぶが流れは向かない。道悪巧者(1/7)、地力ではやや見劣る、人気先行の感は否めない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">7</td><td class="no">8</td><td class="nm">サラフィエル<small>せん7 60.0kg</small></td><td>大江原 圭</td><td class="r">4.0</td><td class="r">2</td><td class="r">21.9%</td><td class="r">62.9%</td><td class="r">2.10倍</td><td class="r">0.88</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率22%でレース2番手評価。先行から立ち回れる展開。地力はメンバー筆頭格。前走はまずまずの内容、これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">8</td><td class="no">10</td><td class="nm">ゴールデンルーキー<small>牡5 60.0kg</small></td><td>草野 太郎</td><td class="r">5.5</td><td class="r">3</td><td class="r">19.3%</td><td class="r">58.1%</td><td class="r">1.94倍</td><td class="r">1.06</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率19%で3番手、上位2頭に食い下がる形。外枠だが中団から運ぶ形。道悪巧者(1/3)、地力は平均的。前走の好走から上積みが見込める。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">2</td><td class="no">2</td><td class="nm">シークレットキー<small>牡5 60.0kg</small></td><td>小野寺 祐太</td><td class="r">5.8</td><td class="r">4</td><td class="r">10.2%</td><td class="r">35.3%</td><td class="r">1.18倍</td><td class="r">0.59</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。後方勢にはやや不利な流れ。相手強化で分が悪い。前走の好走から上積みが見込める。人気を考えるとやや割高。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">4</td><td class="no">4</td><td class="nm">モナコブル<small>牡5 60.0kg</small></td><td>五十嵐 雄祐</td><td class="r">9.2</td><td class="r">5</td><td class="r">8.8%</td><td class="r">31.2%</td><td class="r">1.04倍</td><td class="r">0.81</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率9%で上位争いの一角、展開次第で浮上も。中団から運び、流れは合う。長く良い脚を使えるのが強み(2/4)、実績上位。前走はまずまずの内容。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">6</td><td class="nm">プレミアブルー<small>牡4 60.0kg</small></td><td>中村 将之</td><td class="r">10.2</td><td class="r">6</td><td class="r">4.6%</td><td class="r">17.2%</td><td class="r">0.57倍</td><td class="r">0.47</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">7</td><td class="nm">グロリアラウス<small>せん5 60.0kg</small></td><td>小牧 加矢太</td><td class="r">11.0</td><td class="r">7</td><td class="r">2.8%</td><td class="r">10.6%</td><td class="r">0.35倍</td><td class="r">0.31</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">9</td><td class="nm">ストラクチャー<small>せん5 57.0kg</small></td><td>▲ 水沼 元輝</td><td class="r">21.4</td><td class="r">8</td><td class="r">1.5%</td><td class="r">5.6%</td><td class="r">0.19倍</td><td class="r">0.31</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ヴィーデ<small>せん4 60.0kg</small></td><td>上野 翔</td><td class="r">38.7</td><td class="r">9</td><td class="r">1.2%</td><td class="r">4.6%</td><td class="r">0.15倍</td><td class="r">0.46</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">スノーリン<small>せん4 57.0kg</small></td><td>▲ 土田 真翔</td><td class="r">72.0</td><td class="r">10</td><td class="r">0.2%</td><td class="r">1.0%</td><td class="r">0.03倍</td><td class="r">0.18</td></tr>
+<div class="meta">未勝利 / 2880m / 芝 / 10頭</div>
+<div><span class="pill">想定ペース やや遅い</span><span class="pill na">ラップ分析 対象外（障害）</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">8</td><td class="no">10</td><td class="nm">ゴールデンルーキー<small>牡5 60.0kg 草野 太郎</small></td><td>粕谷 昌央</td><td class="r">3.5</td><td class="r">1</td><td class="r">36.6%</td><td class="r">83.5%</td><td class="r">2.78倍</td><td class="r">1.28</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率37%でレース最上位、本命に推す。外枠だが中団から運ぶ形。道悪巧者(1/3)、地力は平均的。前走の好走から上積みが見込める。人気以上に評価できる。</p><span class="lt bb">道悪 1/3</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">4</td><td class="no">4</td><td class="nm">モナコブル<small>牡5 60.0kg 五十嵐 雄祐</small></td><td>岩戸 孝樹</td><td class="r">5.8</td><td class="r">2</td><td class="r">27.9%</td><td class="r">75.7%</td><td class="r">2.52倍</td><td class="r">1.62</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率28%でレース2番手評価、展開の後押しもある。中団から運び、流れは合う。長く良い脚を使えるのが強み(2/4)、実績上位。前走はまずまずの内容、馬体重は安定。人気以上に評価できる。</p><span class="lt">ロンスパ 2/4</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">7</td><td class="no">8</td><td class="nm">サラフィエル<small>せん7 60.0kg 大江原 圭</small></td><td>鈴木 慎太郎</td><td class="r">7.1</td><td class="r">4</td><td class="r">11.2%</td><td class="r">42.6%</td><td class="r">1.42倍</td><td class="r">0.80</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率11%で3番手、上位2頭に食い下がる形。先行から立ち回れる展開。地力はメンバー筆頭格。前走はまずまずの内容、これまで大きく崩れていない。</p></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">5</td><td class="no">5</td><td class="nm">セイウンビッグバン<small>牡4 60.0kg 伴 啓太</small></td><td>萱野 浩二</td><td class="r">6.9</td><td class="r">3</td><td class="r">10.2%</td><td class="r">39.4%</td><td class="r">1.31倍</td><td class="r">0.71</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率13%と力はあるが、上位とは差がある。中団から運ぶが流れは向かない。道悪巧者(1/7)、地力ではやや見劣る。オッズ妙味はある。</p><span class="lt bb">道悪 1/7</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">6</td><td class="nm">プレミアブルー<small>牡4 60.0kg 中村 将之</small></td><td>菊川 正達</td><td class="r">7.3</td><td class="r">5</td><td class="r">5.5%</td><td class="r">22.4%</td><td class="r">0.75倍</td><td class="r">0.40</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">2</td><td class="nm">シークレットキー<small>牡5 60.0kg 小野寺 祐太</small></td><td>井上 智史</td><td class="r">7.8</td><td class="r">6</td><td class="r">3.7%</td><td class="r">15.6%</td><td class="r">0.52倍</td><td class="r">0.29</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">9</td><td class="nm">ストラクチャー<small>せん5 57.0kg ▲ 水沼 元輝</small></td><td>和田 正一郎</td><td class="r">7.9</td><td class="r">7</td><td class="r">1.8%</td><td class="r">7.7%</td><td class="r">0.26倍</td><td class="r">0.14</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">7</td><td class="nm">グロリアラウス<small>せん5 60.0kg 小牧 加矢太</small></td><td>斉藤 崇史</td><td class="r">9.6</td><td class="r">8</td><td class="r">1.8%</td><td class="r">7.8%</td><td class="r">0.26倍</td><td class="r">0.18</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ヴィーデ<small>せん4 60.0kg 上野 翔</small></td><td>戸田 博文</td><td class="r">72.0</td><td class="r">9</td><td class="r">1.0%</td><td class="r">4.5%</td><td class="r">0.15倍</td><td class="r">0.76</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">スノーリン<small>せん4 57.0kg ▲ 土田 真翔</small></td><td>和田 雄二</td><td class="r">219.1</td><td class="r">10</td><td class="r">0.2%</td><td class="r">0.9%</td><td class="r">0.03倍</td><td class="r">0.48</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：ややS</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：やや遅い</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r2">
 <div class="rh"><span class="no">2R</span>2歳未勝利</div>
-<div class="rsub">未勝利 / 2000m / 芝 / 右 / 10頭</div>
-<div class="pace"><b>想定ペース</b> ややS<br><b>ラップ傾向</b> — / — / — / —<br><b>馬場</b> —</div>
-<div class="warn">キャリア1〜2戦の馬が7頭。実績不足のため印の対象外となる馬が多く、印は参考程度に。</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">7</td><td class="no">8</td><td class="nm">シュートザワークス<small>牡2 55.0kg</small></td><td>津村 明秀</td><td class="r">3.0</td><td class="r">1</td><td class="r">39.7%</td><td class="r">86.3%</td><td class="r">2.88倍</td><td class="r">1.19</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率40%でレース最上位、本命に推す。後方勢にはやや不利な流れ。地力はメンバー筆頭格、2歳戦らしく素質勝負。前走の好走から上積みが見込める、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">7</td><td class="no">7</td><td class="nm">ウィナーズチェック<small>牝2 55.0kg</small></td><td>川田 将雅</td><td class="r">5.3</td><td class="r">4</td><td class="r">12.1%</td><td class="r">45.8%</td><td class="r">1.53倍</td><td class="r">0.64</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率12%でレース2番手評価。後方勢にはやや不利な流れ。実績上位、鞍上は信頼できる、2歳戦らしく素質勝負。前走の好走から上積みが見込める、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。人気を考えるとやや割高。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">5</td><td class="no">5</td><td class="nm">サーギュスターヴ<small>牡2 55.0kg</small></td><td>丹内 祐次</td><td class="r">35.0</td><td class="r">8</td><td class="r">1.5%</td><td class="r">6.6%</td><td class="r">0.22倍</td><td class="r">0.54</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率2%で3番手、上位2頭に食い下がる形。後方勢にはやや不利な流れ。地力ではやや見劣る、2歳戦らしく素質勝負。キャリア2戦で伸びしろは未知数。</td></tr>
-<tr class=""><td class="mk nb">実不<br><span style="font-size:10px">素質上位</span></td><td class="no">3</td><td class="no">3</td><td class="nm">テキサス<small>牡2 55.0kg</small></td><td>岩田 望来</td><td class="r">3.7</td><td class="r">2</td><td class="r">22.4%<span class="ref">*</span></td><td class="r">69.4%<span class="ref">*</span></td><td class="r">2.31倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率22%と力はあるが、上位とは差がある。先行から立ち回れる展開。実績上位、鞍上は信頼できる、2歳戦らしく素質勝負。前走の好走から上積みが見込める、間隔を詰めたローテ、キャリア1戦で伸びしろは未知数、これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk nb">実不<br><span style="font-size:10px">素質上位</span></td><td class="no">4</td><td class="no">4</td><td class="nm">サンタンヌ<small>牝2 55.0kg</small></td><td>武 豊</td><td class="r">4.8</td><td class="r">3</td><td class="r">16.3%<span class="ref">*</span></td><td class="r">57.5%<span class="ref">*</span></td><td class="r">1.92倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率16%と力はあるが、上位とは差がある。先行から立ち回れる展開。地力は平均的、鞍上は信頼できる、2歳戦らしく素質勝負。前走はまずまずの内容、キャリア1戦で伸びしろは未知数。</td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">2</td><td class="no">2</td><td class="nm">マイネルリシャール<small>牡2 55.0kg</small></td><td>三浦 皇成</td><td class="r">7.2</td><td class="r">5</td><td class="r">3.3%<span class="ref">*</span></td><td class="r">13.9%<span class="ref">*</span></td><td class="r">0.46倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">9</td><td class="nm">マイネルウルカヌス<small>牡2 55.0kg</small></td><td>柴田 大知</td><td class="r">33.1</td><td class="r">6</td><td class="r">1.5%<span class="ref">*</span></td><td class="r">6.6%<span class="ref">*</span></td><td class="r">0.22倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">10</td><td class="nm">アルバスタキヤ<small>牡2 55.0kg</small></td><td>原 優介</td><td class="r">34.3</td><td class="r">7</td><td class="r">1.4%<span class="ref">*</span></td><td class="r">6.1%<span class="ref">*</span></td><td class="r">0.20倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">1</td><td class="no">1</td><td class="nm">ライヴテキーラ<small>牝2 55.0kg</small></td><td>杉原 誠人</td><td class="r">41.8</td><td class="r">9</td><td class="r">1.1%<span class="ref">*</span></td><td class="r">4.7%<span class="ref">*</span></td><td class="r">0.16倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">6</td><td class="nm">ギガントシュラーク<small>牡2 55.0kg</small></td><td>丸山 元気</td><td class="r">66.3</td><td class="r">10</td><td class="r">0.7%<span class="ref">*</span></td><td class="r">3.0%<span class="ref">*</span></td><td class="r">0.10倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<div class="meta">未勝利 / 2000m / 芝 / 右 / 10頭</div>
+<div><span class="pill">想定ペース やや遅い</span><span class="pill lap">ラップ傾向 持続・平坦</span><span class="pill lap">流れ 標準 54%</span><span class="pill lap">上がり 11.96秒/F</span><span class="pill">n=82</span></div>
+<div class="warn">キャリアの浅い馬が7頭（実績不足＝印の対象外）。このレースの印は参考程度にご覧ください。</div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">7</td><td class="no">8</td><td class="nm">シュートザワークス<small>牡2 55.0kg 津村 明秀</small></td><td>千葉 直人</td><td class="r">2.7</td><td class="r">1</td><td class="r">41.5%</td><td class="r">87.1%</td><td class="r">2.90倍</td><td class="r">1.12</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率41%でレース最上位、本命に推す。後方勢にはやや不利な流れ。地力はメンバー筆頭格、2歳戦らしく素質勝負。前走の好走から上積みが見込める、馬体重は安定、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。人気以上に評価できる。</p></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">7</td><td class="no">7</td><td class="nm">ウィナーズチェック<small>牝2 55.0kg 川田 将雅</small></td><td>和田 勇介</td><td class="r">6.8</td><td class="r">4</td><td class="r">12.6%</td><td class="r">48.0%</td><td class="r">1.60倍</td><td class="r">0.86</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率13%でレース2番手評価。後方勢にはやや不利な流れ。実績上位、鞍上は信頼できる、2歳戦らしく素質勝負。前走の好走から上積みが見込める、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。</p></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">5</td><td class="no">5</td><td class="nm">サーギュスターヴ<small>牡2 55.0kg 丹内 祐次</small></td><td>杉浦 宏昭</td><td class="r">37.9</td><td class="r">7</td><td class="r">2.3%</td><td class="r">10.0%</td><td class="r">0.33倍</td><td class="r">0.87</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率2%で3番手、上位2頭に食い下がる形。後方勢にはやや不利な流れ。地力ではやや見劣る、2歳戦らしく素質勝負。キャリア2戦で伸びしろは未知数。</p></td></tr>
+<tr class=""><td class="mk nb">実不<span class="sub">素質上位</span></td><td class="no">3</td><td class="no">3</td><td class="nm">テキサス<small>牡2 55.0kg 岩田 望来</small></td><td>田中 博康</td><td class="r">2.8</td><td class="r">2</td><td class="r">23.3%<span class="ref">*</span></td><td class="r">70.8%<span class="ref">*</span></td><td class="r">2.36倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率23%と力はあるが、上位とは差がある。先行から立ち回れる展開。実績上位、鞍上は信頼できる、2歳戦らしく素質勝負。前走の好走から上積みが見込める、間隔を詰めたローテ、キャリア1戦で伸びしろは未知数、これまで大きく崩れていない。人気ほどの安心感はない。</p></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">2</td><td class="no">2</td><td class="nm">マイネルリシャール<small>牡2 55.0kg 三浦 皇成</small></td><td>鹿戸 雄一</td><td class="r">5.5</td><td class="r">3</td><td class="r">9.3%<span class="ref">*</span></td><td class="r">37.2%<span class="ref">*</span></td><td class="r">1.24倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">4</td><td class="no">4</td><td class="nm">サンタンヌ<small>牝2 55.0kg 武 豊</small></td><td>稲垣 幸雄</td><td class="r">9.1</td><td class="r">5</td><td class="r">5.7%<span class="ref">*</span></td><td class="r">23.8%<span class="ref">*</span></td><td class="r">0.79倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">10</td><td class="nm">アルバスタキヤ<small>牡2 55.0kg 原 優介</small></td><td>青木 孝文</td><td class="r">26.9</td><td class="r">6</td><td class="r">2.4%<span class="ref">*</span></td><td class="r">10.2%<span class="ref">*</span></td><td class="r">0.34倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">1</td><td class="no">1</td><td class="nm">ライヴテキーラ<small>牝2 55.0kg 杉原 誠人</small></td><td>牧 光二</td><td class="r">61.6</td><td class="r">8</td><td class="r">1.7%<span class="ref">*</span></td><td class="r">7.4%<span class="ref">*</span></td><td class="r">0.25倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">9</td><td class="nm">マイネルウルカヌス<small>牡2 55.0kg 柴田 大知</small></td><td>畠山 吉宏</td><td class="r">67.7</td><td class="r">9</td><td class="r">0.5%<span class="ref">*</span></td><td class="r">2.2%<span class="ref">*</span></td><td class="r">0.07倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">6</td><td class="nm">ギガントシュラーク<small>牡2 55.0kg 丸山 元気</small></td><td>萱野 浩二</td><td class="r">89.7</td><td class="r">10</td><td class="r">0.7%<span class="ref">*</span></td><td class="r">3.2%<span class="ref">*</span></td><td class="r">0.11倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：ややS</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：やや遅い</span><span class="tag">実績不足：7頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r3">
 <div class="rh"><span class="no">3R</span>2歳未勝利</div>
-<div class="rsub">未勝利 / 1200m / ダート / 右 / 16頭</div>
-<div class="pace"><b>想定ペース</b> ややH<br><b>ラップ傾向</b> — / — / — / —<br><b>馬場</b> —</div>
-<div class="warn">キャリア1〜2戦の馬が12頭。実績不足のため印の対象外となる馬が多く、印は参考程度に。</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">4</td><td class="no">7</td><td class="nm">アレックスケー<small>牡2 55.0kg</small></td><td>石橋 脩</td><td class="r">6.8</td><td class="r">2</td><td class="r">25.9%</td><td class="r">66.0%</td><td class="r">3.52倍</td><td class="r">1.76</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率26%でレース最上位、本命に推す。キャリア2戦、まだ底を見せず中団から。地力はメンバー筆頭格、2歳戦らしく素質勝負。前走はまずまずの内容、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">6</td><td class="no">12</td><td class="nm">キセキノユニコーン<small>牡2 55.0kg</small></td><td>丹内 祐次</td><td class="r">9.5</td><td class="r">3</td><td class="r">10.2%</td><td class="r">33.5%</td><td class="r">1.79倍</td><td class="r">0.97</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率10%でレース2番手評価。キャリア2戦、まだ底を見せず中団から。実績上位、2歳戦らしく素質勝負。前走大敗からの巻き返し待ち、キャリア2戦で伸びしろは未知数。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">8</td><td class="no">16</td><td class="nm">イサチルサリーレ<small>牡2 55.0kg</small></td><td>木幡 初也</td><td class="r">12.9</td><td class="r">5</td><td class="r">8.2%</td><td class="r">27.9%</td><td class="r">1.49倍</td><td class="r">1.06</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率8%で3番手、上位2頭に食い下がる形。ブリンカー着用で中団から。地力は平均的、2歳戦らしく素質勝負、多頭数の外枠は割引が必要。キャリア2戦で伸びしろは未知数。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">1</td><td class="no">1</td><td class="nm">ブレイヴアーサー<small>牡2 53.0kg</small></td><td>◇ 今村 聖奈</td><td class="r">11.3</td><td class="r">4</td><td class="r">6.2%</td><td class="r">21.6%</td><td class="r">1.15倍</td><td class="r">0.70</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。キャリア2戦、まだ底を見せず中団から。相手強化で分が悪い、2歳戦らしく素質勝負。キャリア2戦で伸びしろは未知数、勝ち切れないレースが続く。</td></tr>
-<tr class=""><td class="mk nb">実不<br><span style="font-size:10px">素質上位</span></td><td class="no">3</td><td class="no">6</td><td class="nm">ラフエルガ<small>牝2 55.0kg</small></td><td>横山 武史</td><td class="r">2.5</td><td class="r">1</td><td class="r">25.4%<span class="ref">*</span></td><td class="r">65.3%<span class="ref">*</span></td><td class="r">3.48倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率25%と力はあるが、上位とは差がある。ハナ勢にはやや不利な流れ。地力はメンバー筆頭格、鞍上は信頼できる、2歳戦らしく素質勝負。前走の好走から上積みが見込める、キャリア1戦で伸びしろは未知数、これまで大きく崩れていない。人気ほどの安心感はない。</td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">5</td><td class="no">9</td><td class="nm">アドバンスアゲイン<small>牝2 55.0kg</small></td><td>武藤 雅</td><td class="r">15.9</td><td class="r">6</td><td class="r">5.8%<span class="ref">*</span></td><td class="r">20.2%<span class="ref">*</span></td><td class="r">1.08倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">4</td><td class="no">8</td><td class="nm">サイモンオリエント<small>牡2 55.0kg</small></td><td>原 優介</td><td class="r">16.4</td><td class="r">7</td><td class="r">4.9%<span class="ref">*</span></td><td class="r">17.3%<span class="ref">*</span></td><td class="r">0.93倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">15</td><td class="nm">セイカタカキヤチク<small>牡2 55.0kg</small></td><td>横山 琉人</td><td class="r">20.6</td><td class="r">8</td><td class="r">3.2%<span class="ref">*</span></td><td class="r">11.4%<span class="ref">*</span></td><td class="r">0.61倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">2</td><td class="no">3</td><td class="nm">コスモベスケーデン<small>牝2 55.0kg</small></td><td>津村 明秀</td><td class="r">20.8</td><td class="r">9</td><td class="r">1.4%<span class="ref">*</span></td><td class="r">5.1%<span class="ref">*</span></td><td class="r">0.27倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">2</td><td class="no">4</td><td class="nm">アルニタク<small>牡2 52.0kg</small></td><td>▲ 佐藤 翔馬</td><td class="r">22.3</td><td class="r">10</td><td class="r">1.9%<span class="ref">*</span></td><td class="r">6.9%<span class="ref">*</span></td><td class="r">0.37倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">5</td><td class="no">10</td><td class="nm">パレスラン<small>牡2 55.0kg</small></td><td>M.ミシェル</td><td class="r">23.5</td><td class="r">11</td><td class="r">2.4%<span class="ref">*</span></td><td class="r">8.7%<span class="ref">*</span></td><td class="r">0.47倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">1</td><td class="no">2</td><td class="nm">キンバリー<small>牡2 55.0kg</small></td><td>松岡 正海</td><td class="r">26.7</td><td class="r">12</td><td class="r">1.5%<span class="ref">*</span></td><td class="r">5.3%<span class="ref">*</span></td><td class="r">0.29倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">11</td><td class="nm">サンアンドスターズ<small>牝2 53.0kg</small></td><td>◇ 小林 美駒</td><td class="r">28.1</td><td class="r">13</td><td class="r">1.1%<span class="ref">*</span></td><td class="r">3.9%<span class="ref">*</span></td><td class="r">0.21倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">3</td><td class="no">5</td><td class="nm">ソラティオ<small>牝2 55.0kg</small></td><td>柴田 大知</td><td class="r">36.1</td><td class="r">14</td><td class="r">0.9%<span class="ref">*</span></td><td class="r">3.4%<span class="ref">*</span></td><td class="r">0.18倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">7</td><td class="no">13</td><td class="nm">シュネルアステリア<small>牝2 55.0kg</small></td><td>木幡 巧也</td><td class="r">44.5</td><td class="r">15</td><td class="r">0.7%<span class="ref">*</span></td><td class="r">2.7%<span class="ref">*</span></td><td class="r">0.14倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">7</td><td class="no">14</td><td class="nm">ヴァンデエス<small>牝2 55.0kg</small></td><td>杉原 誠人</td><td class="r">82.7</td><td class="r">16</td><td class="r">0.3%<span class="ref">*</span></td><td class="r">1.0%<span class="ref">*</span></td><td class="r">0.05倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<div class="meta">未勝利 / 1200m / ダート / 右 / 16頭</div>
+<div><span class="pill">想定ペース やや速い</span><span class="pill lap">ラップ傾向 標準・減速</span><span class="pill lap">流れ 標準 79%</span><span class="pill lap">上がり 12.35秒/F</span><span class="pill">n=195</span></div>
+<div class="warn">キャリアの浅い馬が12頭（実績不足＝印の対象外）。このレースの印は参考程度にご覧ください。</div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">4</td><td class="no">7</td><td class="nm">アレックスケー<small>牡2 55.0kg 石橋 脩</small></td><td>小野 次郎</td><td class="r">5.9</td><td class="r">2</td><td class="r">26.2%</td><td class="r">66.6%</td><td class="r">3.55倍</td><td class="r">1.55</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率26%でレース最上位、本命に推す。キャリア2戦、まだ底を見せず中団から。地力はメンバー筆頭格、2歳戦らしく素質勝負。前走はまずまずの内容、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。人気以上に評価できる。</p></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">6</td><td class="no">12</td><td class="nm">キセキノユニコーン<small>牡2 55.0kg 丹内 祐次</small></td><td>伊坂 重信</td><td class="r">9.1</td><td class="r">3</td><td class="r">10.3%</td><td class="r">34.0%</td><td class="r">1.81倍</td><td class="r">0.94</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率10%でレース2番手評価。キャリア2戦、まだ底を見せず中団から。実績上位、2歳戦らしく素質勝負。前走大敗からの巻き返し待ち、馬体+10kgの変動、キャリア2戦で伸びしろは未知数。オッズ妙味はある。</p></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">8</td><td class="no">16</td><td class="nm">イサチルサリーレ<small>牡2 55.0kg 木幡 初也</small></td><td>竹内 正洋</td><td class="r">16.1</td><td class="r">5</td><td class="r">8.3%</td><td class="r">28.3%</td><td class="r">1.51倍</td><td class="r">1.34</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率8%で3番手、上位2頭に食い下がる形。ブリンカー着用で中団から。地力は平均的、2歳戦らしく素質勝負、多頭数の外枠は割引が必要。キャリア2戦で伸びしろは未知数。オッズ妙味はある。</p></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">1</td><td class="no">1</td><td class="nm">ブレイヴアーサー<small>牡2 53.0kg ◇ 今村 聖奈</small></td><td>奥平 雅士</td><td class="r">13.1</td><td class="r">4</td><td class="r">6.3%</td><td class="r">21.9%</td><td class="r">1.17倍</td><td class="r">0.83</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。キャリア2戦、まだ底を見せず中団から。相手強化で分が悪い、2歳戦らしく素質勝負。馬体重は安定、キャリア2戦で伸びしろは未知数、勝ち切れないレースが続く。</p></td></tr>
+<tr class=""><td class="mk nb">実不<span class="sub">素質上位</span></td><td class="no">3</td><td class="no">6</td><td class="nm">ラフエルガ<small>牝2 55.0kg 横山 武史</small></td><td>鈴木 伸尋</td><td class="r">2.3</td><td class="r">1</td><td class="r">25.7%<span class="ref">*</span></td><td class="r">65.9%<span class="ref">*</span></td><td class="r">3.51倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率26%と力はあるが、上位とは差がある。ハナ勢にはやや不利な流れ。地力はメンバー筆頭格、鞍上は信頼できる、2歳戦らしく素質勝負。前走の好走から上積みが見込める、馬体重は安定、キャリア1戦で伸びしろは未知数、これまで大きく崩れていない。人気ほどの安心感はない。</p></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">5</td><td class="no">9</td><td class="nm">アドバンスアゲイン<small>牝2 55.0kg 武藤 雅</small></td><td>武藤 善則</td><td class="r">16.9</td><td class="r">6</td><td class="r">5.9%<span class="ref">*</span></td><td class="r">20.5%<span class="ref">*</span></td><td class="r">1.09倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">2</td><td class="no">3</td><td class="nm">コスモベスケーデン<small>牝2 55.0kg 津村 明秀</small></td><td>手塚 貴久</td><td class="r">18.7</td><td class="r">7</td><td class="r">1.9%<span class="ref">*</span></td><td class="r">6.9%<span class="ref">*</span></td><td class="r">0.37倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">4</td><td class="no">8</td><td class="nm">サイモンオリエント<small>牡2 55.0kg 原 優介</small></td><td>勢司 和浩</td><td class="r">19.2</td><td class="r">8</td><td class="r">4.1%<span class="ref">*</span></td><td class="r">14.7%<span class="ref">*</span></td><td class="r">0.78倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">15</td><td class="nm">セイカタカキヤチク<small>牡2 55.0kg 横山 琉人</small></td><td>相沢 郁</td><td class="r">19.5</td><td class="r">9</td><td class="r">2.4%<span class="ref">*</span></td><td class="r">8.8%<span class="ref">*</span></td><td class="r">0.47倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">2</td><td class="no">4</td><td class="nm">アルニタク<small>牡2 52.0kg ▲ 佐藤 翔馬</small></td><td>伊藤 圭三</td><td class="r">21.5</td><td class="r">10</td><td class="r">1.9%<span class="ref">*</span></td><td class="r">7.0%<span class="ref">*</span></td><td class="r">0.37倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">5</td><td class="no">10</td><td class="nm">パレスラン<small>牡2 55.0kg M.ミシェル</small></td><td>手塚 貴久</td><td class="r">25.8</td><td class="r">11</td><td class="r">2.4%<span class="ref">*</span></td><td class="r">8.9%<span class="ref">*</span></td><td class="r">0.47倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">1</td><td class="no">2</td><td class="nm">キンバリー<small>牡2 55.0kg 松岡 正海</small></td><td>伊藤 伸一</td><td class="r">36.6</td><td class="r">12</td><td class="r">1.5%<span class="ref">*</span></td><td class="r">5.4%<span class="ref">*</span></td><td class="r">0.29倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">11</td><td class="nm">サンアンドスターズ<small>牝2 53.0kg ◇ 小林 美駒</small></td><td>畠山 吉宏</td><td class="r">39.4</td><td class="r">13</td><td class="r">1.1%<span class="ref">*</span></td><td class="r">4.0%<span class="ref">*</span></td><td class="r">0.21倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">3</td><td class="no">5</td><td class="nm">ソラティオ<small>牝2 55.0kg 柴田 大知</small></td><td>粕谷 昌央</td><td class="r">48.2</td><td class="r">14</td><td class="r">0.9%<span class="ref">*</span></td><td class="r">3.5%<span class="ref">*</span></td><td class="r">0.18倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">7</td><td class="no">13</td><td class="nm">シュネルアステリア<small>牝2 55.0kg 木幡 巧也</small></td><td>牧 光二</td><td class="r">57.0</td><td class="r">15</td><td class="r">0.7%<span class="ref">*</span></td><td class="r">2.7%<span class="ref">*</span></td><td class="r">0.14倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">7</td><td class="no">14</td><td class="nm">ヴァンデエス<small>牝2 55.0kg 杉原 誠人</small></td><td>中舘 英二</td><td class="r">100.6</td><td class="r">16</td><td class="r">0.3%<span class="ref">*</span></td><td class="r">1.0%<span class="ref">*</span></td><td class="r">0.05倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：ややH</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：やや速い</span><span class="tag">実績不足：12頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r4">
 <div class="rh"><span class="no">4R</span>3歳未勝利</div>
-<div class="rsub">未勝利 / 1600m / 芝 / 右 外 / 16頭</div>
-<div class="pace"><b>想定ペース</b> ややH<br><b>ラップ傾向</b> — / 1/4 / — / 0/3<br><b>馬場</b> 1/3</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">5</td><td class="no">10</td><td class="nm">ウインドオブヘヴン<small>牡3 57.0kg</small></td><td>岩田 望来</td><td class="r">3.6</td><td class="r">1</td><td class="r">23.1%</td><td class="r">59.7%</td><td class="r">3.18倍</td><td class="r">0.83</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率23%でレース最上位。展開の上積みも見込めるのが決め手。中団から運び、流れは合う。道悪巧者(1/3)、上がり勝負の経験あり(1/4)、地力は平均的、鞍上は信頼できる。前走はまずまずの内容、ブリンカーで集中力を補う。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">4</td><td class="no">8</td><td class="nm">ワインダークシー<small>牡3 57.0kg</small></td><td>田辺 裕信</td><td class="r">5.6</td><td class="r">2</td><td class="r">19.3%</td><td class="r">53.1%</td><td class="r">2.83倍</td><td class="r">1.08</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率19%でレース2番手評価。ハナ勢にはやや不利な流れ。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格。前走の好走から上積みが見込める、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">3</td><td class="no">5</td><td class="nm">グランマエストロ<small>牡3 57.0kg</small></td><td>池添 謙一</td><td class="r">6.6</td><td class="r">3</td><td class="r">13.5%</td><td class="r">40.5%</td><td class="r">2.16倍</td><td class="r">0.89</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率13%で3番手だが、展開面はやや割引。中団から運ぶが流れは向かない。実績上位。これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">3</td><td class="no">6</td><td class="nm">ショウナンバーボン<small>牡3 57.0kg</small></td><td>松山 弘平</td><td class="r">9.4</td><td class="r">5</td><td class="r">9.3%</td><td class="r">29.7%</td><td class="r">1.58倍</td><td class="r">0.88</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。先行勢には忙しい流れだが、速い決着自体は苦にしない。上がり勝負の経験あり(1/3)、地力は平均的、鞍上は信頼できる。前走はまずまずの内容。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">7</td><td class="no">13</td><td class="nm">オンナキュヌヴィ<small>牝3 55.0kg</small></td><td>武 豊</td><td class="r">8.6</td><td class="r">4</td><td class="r">7.4%</td><td class="r">24.0%</td><td class="r">1.28倍</td><td class="r">0.63</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率7%で上位争いの一角。後方から立ち回れる展開。地力はメンバー筆頭格、鞍上は信頼できる、多頭数の外枠は割引が必要。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。人気を考えるとやや割高。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">1</td><td class="no">2</td><td class="nm">ランウェイミューズ<small>牝3 55.0kg</small></td><td>丹内 祐次</td><td class="r">13.0</td><td class="r">7</td><td class="r">7.5%</td><td class="r">24.5%</td><td class="r">1.31倍</td><td class="r">0.98</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率8%で上位争いの一角、展開次第で浮上も。中団から運び、流れは合う。実績上位。前走の好走から上積みが見込める、これまで大きく崩れていない。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ジャジャミン<small>牝3 55.0kg</small></td><td>木幡 育也</td><td class="r">10.4</td><td class="r">6</td><td class="r">2.7%</td><td class="r">9.1%</td><td class="r">0.49倍</td><td class="r">0.28</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">16</td><td class="nm">ラグアイリータ<small>牝3 55.0kg</small></td><td>津村 明秀</td><td class="r">13.7</td><td class="r">8</td><td class="r">3.7%</td><td class="r">12.4%</td><td class="r">0.66倍</td><td class="r">0.50</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">ピコプリンセス<small>牝3 55.0kg</small></td><td>石橋 脩</td><td class="r">26.2</td><td class="r">9</td><td class="r">3.7%</td><td class="r">12.5%</td><td class="r">0.67倍</td><td class="r">0.96</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">14</td><td class="nm">アリアス<small>牝3 55.0kg</small></td><td>三浦 皇成</td><td class="r">31.3</td><td class="r">10</td><td class="r">3.3%</td><td class="r">11.2%</td><td class="r">0.60倍</td><td class="r">1.03</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">2</td><td class="no">4</td><td class="nm">ダイユウルミナス<small>牝3 53.0kg</small></td><td>◇ 小林 美駒</td><td class="r">32.3</td><td class="r">11</td><td class="r">3.4%</td><td class="r">11.7%</td><td class="r">0.63倍</td><td class="r">1.11</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。後方から立ち回れる展開。地力は平均的、斤量差は有利に働く。前走の好走から上積みが見込める、ブリンカーで集中力を補う。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">ニシノオールワン<small>牝3 55.0kg</small></td><td>鮫島 克駿</td><td class="r">37.4</td><td class="r">12</td><td class="r">1.3%</td><td class="r">4.6%</td><td class="r">0.25倍</td><td class="r">0.50</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">15</td><td class="nm">ポポラヴィスタ<small>牝3 53.0kg</small></td><td>△ 石神 深道</td><td class="r">38.4</td><td class="r">13</td><td class="r">0.3%</td><td class="r">1.2%</td><td class="r">0.06倍</td><td class="r">0.13</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">9</td><td class="nm">ワッフル<small>牝3 55.0kg</small></td><td>嶋田 純次</td><td class="r">120.7</td><td class="r">14</td><td class="r">0.7%</td><td class="r">2.6%</td><td class="r">0.14倍</td><td class="r">0.89</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">ブライティアロード<small>牝3 55.0kg</small></td><td>菊沢 一樹</td><td class="r">123.2</td><td class="r">15</td><td class="r">0.5%</td><td class="r">1.8%</td><td class="r">0.10倍</td><td class="r">0.64</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">11</td><td class="nm">ロジタイガー<small>牝3 55.0kg</small></td><td>松岡 正海</td><td class="r">138.9</td><td class="r">16</td><td class="r">0.4%</td><td class="r">1.3%</td><td class="r">0.07倍</td><td class="r">0.52</td></tr>
+<div class="meta">未勝利 / 1600m / 芝 / 右 外 / 16頭</div>
+<div><span class="pill">想定ペース やや速い</span><span class="pill lap">ラップ傾向 標準・平坦</span><span class="pill lap">流れ 標準 70%</span><span class="pill lap">上がり 11.81秒/F</span><span class="pill">n=100</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">4</td><td class="no">8</td><td class="nm">ワインダークシー<small>牡3 57.0kg 田辺 裕信</small></td><td>中舘 英二</td><td class="r">5.5</td><td class="r">1</td><td class="r">25.9%</td><td class="r">64.5%</td><td class="r">3.44倍</td><td class="r">1.43</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率26%でレース最上位、本命に推す。ハナ勢にはやや不利な流れ。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格。前走の好走から上積みが見込める、これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">瞬発 3/3</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">3</td><td class="no">6</td><td class="nm">ショウナンバーボン<small>牡3 57.0kg 松山 弘平</small></td><td>加藤 士津八</td><td class="r">6.3</td><td class="r">2</td><td class="r">18.6%</td><td class="r">52.4%</td><td class="r">2.79倍</td><td class="r">1.17</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率19%でレース2番手評価、展開の後押しもある。先行勢には忙しい流れだが、速い決着自体は苦にしない。上がり勝負の経験あり(1/3)、地力は平均的、鞍上は信頼できる。前走はまずまずの内容。オッズ妙味はある。</p><span class="lt">瞬発 1/3</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">3</td><td class="no">5</td><td class="nm">グランマエストロ<small>牡3 57.0kg 池添 謙一</small></td><td>木村 哲也</td><td class="r">7.3</td><td class="r">3</td><td class="r">13.3%</td><td class="r">40.7%</td><td class="r">2.17倍</td><td class="r">0.97</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率13%で3番手だが、展開面はやや割引。中団から運ぶが流れは向かない。実績上位。これまで大きく崩れていない。人気以上に評価できる。</p></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">5</td><td class="no">10</td><td class="nm">ウインドオブヘヴン<small>牡3 57.0kg 岩田 望来</small></td><td>戸田 博文</td><td class="r">7.9</td><td class="r">4</td><td class="r">9.1%</td><td class="r">29.4%</td><td class="r">1.57倍</td><td class="r">0.72</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。中団から運び、流れは合う。道悪巧者(1/3)、上がり勝負の経験あり(1/4)、地力は平均的、鞍上は信頼できる。前走はまずまずの内容、ブリンカーで集中力を補う。人気を考えるとやや割高。</p><span class="lt">瞬発 1/4</span><span class="lt">加速 0/3</span><span class="lt bb">道悪 1/3</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">7</td><td class="no">13</td><td class="nm">オンナキュヌヴィ<small>牝3 55.0kg 武 豊</small></td><td>蛯名 正義</td><td class="r">8.3</td><td class="r">5</td><td class="r">6.2%</td><td class="r">20.8%</td><td class="r">1.11倍</td><td class="r">0.51</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率6%で上位争いの一角。後方から立ち回れる展開。地力はメンバー筆頭格、鞍上は信頼できる、多頭数の外枠は割引が必要。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。人気を考えるとやや割高。</p></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">1</td><td class="no">2</td><td class="nm">ランウェイミューズ<small>牝3 55.0kg 丹内 祐次</small></td><td>竹内 正洋</td><td class="r">10.1</td><td class="r">7</td><td class="r">7.4%</td><td class="r">24.6%</td><td class="r">1.31倍</td><td class="r">0.75</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率7%で上位争いの一角、展開次第で浮上も。中団から運び、流れは合う。実績上位。前走の好走から上積みが見込める、これまで大きく崩れていない。</p></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ジャジャミン<small>牝3 55.0kg 木幡 育也</small></td><td>高橋 文雅</td><td class="r">9.5</td><td class="r">6</td><td class="r">2.6%</td><td class="r">9.2%</td><td class="r">0.49倍</td><td class="r">0.25</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">16</td><td class="nm">ラグアイリータ<small>牝3 55.0kg 津村 明秀</small></td><td>岩戸 孝樹</td><td class="r">14.3</td><td class="r">8</td><td class="r">3.6%</td><td class="r">12.5%</td><td class="r">0.67倍</td><td class="r">0.52</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">ピコプリンセス<small>牝3 55.0kg 石橋 脩</small></td><td>伊藤 大士</td><td class="r">17.2</td><td class="r">9</td><td class="r">3.6%</td><td class="r">12.5%</td><td class="r">0.67倍</td><td class="r">0.62</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">ダイユウルミナス<small>牝3 53.0kg ◇ 小林 美駒</small></td><td>松永 康利</td><td class="r">17.9</td><td class="r">10</td><td class="r">3.8%</td><td class="r">13.0%</td><td class="r">0.70倍</td><td class="r">0.68</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">14</td><td class="nm">アリアス<small>牝3 55.0kg 三浦 皇成</small></td><td>高柳 瑞樹</td><td class="r">22.9</td><td class="r">11</td><td class="r">2.5%</td><td class="r">8.8%</td><td class="r">0.47倍</td><td class="r">0.58</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">ニシノオールワン<small>牝3 55.0kg 鮫島 克駿</small></td><td>加藤 征弘</td><td class="r">25.3</td><td class="r">12</td><td class="r">1.3%</td><td class="r">4.7%</td><td class="r">0.25倍</td><td class="r">0.33</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">15</td><td class="nm">ポポラヴィスタ<small>牝3 53.0kg △ 石神 深道</small></td><td>鈴木 慎太郎</td><td class="r">37.4</td><td class="r">13</td><td class="r">0.3%</td><td class="r">1.2%</td><td class="r">0.06倍</td><td class="r">0.12</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">9</td><td class="nm">ワッフル<small>牝3 55.0kg 嶋田 純次</small></td><td>室井 潔</td><td class="r">71.7</td><td class="r">14</td><td class="r">0.7%</td><td class="r">2.6%</td><td class="r">0.14倍</td><td class="r">0.52</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">ブライティアロード<small>牝3 55.0kg 菊沢 一樹</small></td><td>和田 正一郎</td><td class="r">71.9</td><td class="r">15</td><td class="r">0.5%</td><td class="r">1.8%</td><td class="r">0.10倍</td><td class="r">0.37</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">11</td><td class="nm">ロジタイガー<small>牝3 55.0kg 松岡 正海</small></td><td>古賀 慎明</td><td class="r">117.7</td><td class="r">16</td><td class="r">0.4%</td><td class="r">1.3%</td><td class="r">0.07倍</td><td class="r">0.44</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：ややH</span><span class="tag">ラップ傾向：—</span><span class="tag v">妙味：◇1頭</span></div>
+<div class="tags"><span class="tag">想定ペース：やや速い</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r5">
 <div class="rh"><span class="no">5R</span>メイクデビュー中山</div>
-<div class="rsub">新馬 / 1800m / 芝 / 右 / 11頭</div>
-<div class="pace"><b>想定ペース</b> S<br><b>ラップ傾向</b> — / — / — / —<br><b>馬場</b> —</div>
-<div class="warn">キャリア1〜2戦の馬が11頭。実績不足のため印の対象外となる馬が多く、印は参考程度に。</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class=""><td class="mk nb">実不<br><span style="font-size:10px">素質上位</span></td><td class="no">8</td><td class="no">11</td><td class="nm">スローブギ<small>牡2 55.0kg</small></td><td>M.ミシェル</td><td class="r">1.9</td><td class="r">1</td><td class="r">40.3%<span class="ref">*</span></td><td class="r">85.2%<span class="ref">*</span></td><td class="r">3.12倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class="cmt"><td></td><td colspan="10">新馬でデータなし。市場は1番人気の評価、鞍上M.ミシェル。</td></tr>
-<tr class=""><td class="mk nb">実不<br><span style="font-size:10px">素質上位</span></td><td class="no">7</td><td class="no">9</td><td class="nm">サトノアニマ<small>牡2 55.0kg</small></td><td>川田 将雅</td><td class="r">5.6</td><td class="r">2</td><td class="r">22.5%<span class="ref">*</span></td><td class="r">67.7%<span class="ref">*</span></td><td class="r">2.48倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class="cmt"><td></td><td colspan="10">新馬でデータなし。市場は2番人気の評価、鞍上川田 将雅。</td></tr>
-<tr class=""><td class="mk nb">実不<br><span style="font-size:10px">素質上位</span></td><td class="no">2</td><td class="no">2</td><td class="nm">ラルコ<small>牝2 55.0kg</small></td><td>田辺 裕信</td><td class="r">5.9</td><td class="r">3</td><td class="r">12.2%<span class="ref">*</span></td><td class="r">45.0%<span class="ref">*</span></td><td class="r">1.65倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class="cmt"><td></td><td colspan="10">新馬でデータなし。市場は3番人気の評価、鞍上田辺 裕信。</td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">5</td><td class="no">5</td><td class="nm">コッディ<small>牝2 55.0kg</small></td><td>三浦 皇成</td><td class="r">7.2</td><td class="r">4</td><td class="r">8.1%<span class="ref">*</span></td><td class="r">31.8%<span class="ref">*</span></td><td class="r">1.17倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">6</td><td class="nm">コスモコリウス<small>牡2 55.0kg</small></td><td>丹内 祐次</td><td class="r">12.1</td><td class="r">5</td><td class="r">5.9%<span class="ref">*</span></td><td class="r">23.6%<span class="ref">*</span></td><td class="r">0.87倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">7</td><td class="no">8</td><td class="nm">タンタトリス<small>牝2 55.0kg</small></td><td>横山 武史</td><td class="r">12.9</td><td class="r">6</td><td class="r">2.5%<span class="ref">*</span></td><td class="r">10.5%<span class="ref">*</span></td><td class="r">0.38倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">3</td><td class="no">3</td><td class="nm">ストロングボイス<small>牡2 55.0kg</small></td><td>丸山 元気</td><td class="r">35.0</td><td class="r">7</td><td class="r">3.0%<span class="ref">*</span></td><td class="r">12.4%<span class="ref">*</span></td><td class="r">0.45倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">1</td><td class="no">1</td><td class="nm">セイルクルーズ<small>牝2 55.0kg</small></td><td>武藤 雅</td><td class="r">35.2</td><td class="r">8</td><td class="r">2.1%<span class="ref">*</span></td><td class="r">8.8%<span class="ref">*</span></td><td class="r">0.32倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">10</td><td class="nm">ホウフクゼットウ<small>牡2 52.0kg</small></td><td>▲ 水沼 元輝</td><td class="r">54.6</td><td class="r">9</td><td class="r">1.5%<span class="ref">*</span></td><td class="r">6.2%<span class="ref">*</span></td><td class="r">0.23倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">7</td><td class="nm">マイサマーガール<small>牝2 55.0kg</small></td><td>原 優介</td><td class="r">56.7</td><td class="r">10</td><td class="r">1.2%<span class="ref">*</span></td><td class="r">5.3%<span class="ref">*</span></td><td class="r">0.19倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">4</td><td class="no">4</td><td class="nm">カシノデスティニー<small>牝2 55.0kg</small></td><td>柴田 大知</td><td class="r">78.9</td><td class="r">11</td><td class="r">0.8%<span class="ref">*</span></td><td class="r">3.5%<span class="ref">*</span></td><td class="r">0.13倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<div class="meta">新馬 / 1800m / 芝 / 右 / 11頭</div>
+<div><span class="pill">想定ペース スロー</span><span class="pill lap">ラップ傾向 標準・加速＋瞬発</span><span class="pill lap">流れ 標準 50%</span><span class="pill lap">上がり 11.80秒/F</span><span class="pill">n=48</span></div>
+<div class="warn">キャリアの浅い馬が11頭（実績不足＝印の対象外）。このレースの印は参考程度にご覧ください。</div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class=""><td class="mk nb">実不<span class="sub">素質上位</span></td><td class="no">8</td><td class="no">11</td><td class="nm">スローブギ<small>牡2 55.0kg M.ミシェル</small></td><td>和田 勇介</td><td class="r">3.2</td><td class="r">1</td><td class="r">40.2%<span class="ref">*</span></td><td class="r">85.1%<span class="ref">*</span></td><td class="r">3.12倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">新馬でデータなし。市場は1番人気の評価、鞍上M.ミシェル。</p></td></tr>
+<tr class=""><td class="mk nb">実不<span class="sub">素質上位</span></td><td class="no">7</td><td class="no">9</td><td class="nm">サトノアニマ<small>牡2 55.0kg 川田 将雅</small></td><td>鹿戸 雄一</td><td class="r">4.6</td><td class="r">2</td><td class="r">22.4%<span class="ref">*</span></td><td class="r">67.5%<span class="ref">*</span></td><td class="r">2.48倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">新馬でデータなし。市場は2番人気の評価、鞍上川田 将雅。</p></td></tr>
+<tr class=""><td class="mk nb">実不<span class="sub">素質上位</span></td><td class="no">2</td><td class="no">2</td><td class="nm">ラルコ<small>牝2 55.0kg 田辺 裕信</small></td><td>中舘 英二</td><td class="r">4.9</td><td class="r">3</td><td class="r">12.2%<span class="ref">*</span></td><td class="r">44.9%<span class="ref">*</span></td><td class="r">1.65倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">新馬でデータなし。市場は3番人気の評価、鞍上田辺 裕信。</p></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">5</td><td class="no">5</td><td class="nm">コッディ<small>牝2 55.0kg 三浦 皇成</small></td><td>田島 俊明</td><td class="r">5.4</td><td class="r">4</td><td class="r">8.1%<span class="ref">*</span></td><td class="r">31.7%<span class="ref">*</span></td><td class="r">1.16倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">6</td><td class="nm">コスモコリウス<small>牡2 55.0kg 丹内 祐次</small></td><td>栗田 徹</td><td class="r">8.1</td><td class="r">5</td><td class="r">5.8%<span class="ref">*</span></td><td class="r">23.6%<span class="ref">*</span></td><td class="r">0.86倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">7</td><td class="no">8</td><td class="nm">タンタトリス<small>牝2 55.0kg 横山 武史</small></td><td>矢嶋 大樹</td><td class="r">10.9</td><td class="r">6</td><td class="r">2.5%<span class="ref">*</span></td><td class="r">10.4%<span class="ref">*</span></td><td class="r">0.38倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">3</td><td class="no">3</td><td class="nm">ストロングボイス<small>牡2 55.0kg 丸山 元気</small></td><td>手塚 貴徳</td><td class="r">23.2</td><td class="r">7</td><td class="r">3.0%<span class="ref">*</span></td><td class="r">12.4%<span class="ref">*</span></td><td class="r">0.45倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">1</td><td class="no">1</td><td class="nm">セイルクルーズ<small>牝2 55.0kg 武藤 雅</small></td><td>武藤 善則</td><td class="r">33.8</td><td class="r">8</td><td class="r">2.1%<span class="ref">*</span></td><td class="r">8.8%<span class="ref">*</span></td><td class="r">0.32倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">6</td><td class="no">7</td><td class="nm">マイサマーガール<small>牝2 55.0kg 原 優介</small></td><td>伊藤 伸一</td><td class="r">42.5</td><td class="r">9</td><td class="r">1.5%<span class="ref">*</span></td><td class="r">6.4%<span class="ref">*</span></td><td class="r">0.23倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">4</td><td class="no">4</td><td class="nm">カシノデスティニー<small>牝2 55.0kg 柴田 大知</small></td><td>和田 雄二</td><td class="r">56.3</td><td class="r">10</td><td class="r">1.5%<span class="ref">*</span></td><td class="r">6.3%<span class="ref">*</span></td><td class="r">0.23倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">10</td><td class="nm">ホウフクゼットウ<small>牡2 52.0kg ▲ 水沼 元輝</small></td><td>加藤 和宏</td><td class="r">57.4</td><td class="r">11</td><td class="r">0.7%<span class="ref">*</span></td><td class="r">2.9%<span class="ref">*</span></td><td class="r">0.11倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：S</span><span class="tag">ラップ傾向：—</span><span class="tag v">本命：該当なし</span></div>
+<div class="tags"><span class="tag">想定ペース：スロー</span><span class="tag v">本命：該当なし</span><span class="tag">実績不足：11頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r6">
 <div class="rh"><span class="no">6R</span>3歳未勝利</div>
-<div class="rsub">未勝利 / 1800m / ダート / 右 / 16頭</div>
-<div class="pace"><b>想定ペース</b> M<br><b>ラップ傾向</b> — / — / 4/4 / —<br><b>馬場</b> —</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">5</td><td class="no">9</td><td class="nm">ホウオウファミリー<small>牡3 57.0kg</small></td><td>岩田 望来</td><td class="r">3.3</td><td class="r">1</td><td class="r">26.7%</td><td class="r">66.6%</td><td class="r">3.55倍</td><td class="r">0.88</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率27%でレース最上位、本命に推す。ブリンカー着用でハナから。持続戦に確かな実績(4/4)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">4</td><td class="no">8</td><td class="nm">ルシアージュ<small>牝3 55.0kg</small></td><td>三浦 皇成</td><td class="r">6.3</td><td class="r">2</td><td class="r">21.3%</td><td class="r">58.3%</td><td class="r">3.11倍</td><td class="r">1.34</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率21%でレース2番手評価。中団から運ぶ形。加速ラップで結果を出している(3/3)、実績上位。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">7</td><td class="no">13</td><td class="nm">フィクセルリリア<small>牝3 55.0kg</small></td><td>吉田 豊</td><td class="r">9.3</td><td class="r">3</td><td class="r">12.9%</td><td class="r">40.3%</td><td class="r">2.15倍</td><td class="r">1.20</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率13%で3番手、上位2頭に食い下がる形。多頭数の外枠、中団から運ぶ形。実績上位。前走の好走から上積みが見込める。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">1</td><td class="no">2</td><td class="nm">ヨーゼフ<small>牡3 57.0kg</small></td><td>武藤 雅</td><td class="r">10.4</td><td class="r">4</td><td class="r">8.7%</td><td class="r">28.9%</td><td class="r">1.54倍</td><td class="r">0.91</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。ブリンカー着用で後方から。道悪巧者(1/3)、持続戦の経験あり(1/3)、地力は平均的。前走の好走から上積みが見込める、間隔を詰めたローテ。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">8</td><td class="no">15</td><td class="nm">ゴールデンダガー<small>牡3 57.0kg</small></td><td>横山 琉人</td><td class="r">11.6</td><td class="r">5</td><td class="r">7.0%</td><td class="r">23.8%</td><td class="r">1.27倍</td><td class="r">0.81</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率7%で上位争いの一角。多頭数の外枠、先行から運ぶ形。上がり勝負に確かな実績(2/4)、実績上位。前走はまずまずの内容、これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">1</td><td class="no">1</td><td class="nm">マイネルオランチア<small>牡3 57.0kg</small></td><td>菊沢 一樹</td><td class="r">12.9</td><td class="r">6</td><td class="r">7.9%</td><td class="r">26.5%</td><td class="r">1.42倍</td><td class="r">1.02</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率8%で上位争いの一角。ブリンカー着用で中団から。持続戦に確かな実績(3/3)、地力はメンバー筆頭格。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">11</td><td class="nm">レッドフリーマン<small>牡3 57.0kg</small></td><td>池添 謙一</td><td class="r">15.8</td><td class="r">7</td><td class="r">2.4%</td><td class="r">8.6%</td><td class="r">0.46倍</td><td class="r">0.38</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">タニセンローマ<small>牡3 57.0kg</small></td><td>松山 弘平</td><td class="r">20.4</td><td class="r">8</td><td class="r">2.5%</td><td class="r">9.1%</td><td class="r">0.48倍</td><td class="r">0.52</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">ロンバルドシチー<small>牡3 56.0kg</small></td><td>☆ 長浜 鴻緒</td><td class="r">20.8</td><td class="r">9</td><td class="r">1.4%</td><td class="r">5.0%</td><td class="r">0.27倍</td><td class="r">0.29</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">14</td><td class="nm">オウケンサクラコ<small>牝3 55.0kg</small></td><td>丸田 恭介</td><td class="r">21.5</td><td class="r">10</td><td class="r">2.3%</td><td class="r">8.3%</td><td class="r">0.44倍</td><td class="r">0.50</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">オートカリテ<small>牝3 55.0kg</small></td><td>M.ミシェル</td><td class="r">21.6</td><td class="r">11</td><td class="r">2.2%</td><td class="r">8.0%</td><td class="r">0.43倍</td><td class="r">0.48</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">6</td><td class="nm">パワポケウォーズ<small>牡3 54.0kg</small></td><td>▲ 上里 直汰</td><td class="r">24.2</td><td class="r">12</td><td class="r">1.7%</td><td class="r">6.2%</td><td class="r">0.33倍</td><td class="r">0.42</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">5</td><td class="nm">ヨドノサファイア<small>牝3 55.0kg</small></td><td>丹内 祐次</td><td class="r">24.8</td><td class="r">13</td><td class="r">1.4%</td><td class="r">5.0%</td><td class="r">0.27倍</td><td class="r">0.34</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">ギャニミード<small>牝3 55.0kg</small></td><td>杉原 誠人</td><td class="r">25.0</td><td class="r">14</td><td class="r">0.5%</td><td class="r">1.9%</td><td class="r">0.10倍</td><td class="r">0.13</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">10</td><td class="nm">ヤマトスイフト<small>牝3 55.0kg</small></td><td>内田 博幸</td><td class="r">36.6</td><td class="r">15</td><td class="r">0.3%</td><td class="r">1.1%</td><td class="r">0.06倍</td><td class="r">0.11</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">16</td><td class="nm">ディープマウンテン<small>牝3 55.0kg</small></td><td>大野 拓弥</td><td class="r">40.5</td><td class="r">16</td><td class="r">0.7%</td><td class="r">2.5%</td><td class="r">0.14倍</td><td class="r">0.28</td></tr>
+<div class="meta">未勝利 / 1800m / ダート / 右 / 16頭</div>
+<div><span class="pill">想定ペース 平均</span><span class="pill lap">ラップ傾向 標準・平坦</span><span class="pill lap">流れ 標準 58%</span><span class="pill lap">上がり 12.90秒/F</span><span class="pill">n=231</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">5</td><td class="no">9</td><td class="nm">ホウオウファミリー<small>牡3 57.0kg 岩田 望来</small></td><td>田中 博康</td><td class="r">3.1</td><td class="r">1</td><td class="r">26.8%</td><td class="r">66.7%</td><td class="r">3.56倍</td><td class="r">0.83</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率27%でレース最上位、本命に推す。ブリンカー着用でハナから。持続戦に確かな実績(4/4)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。</p><span class="lt">持続 4/4</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">4</td><td class="no">8</td><td class="nm">ルシアージュ<small>牝3 55.0kg 三浦 皇成</small></td><td>高柳 瑞樹</td><td class="r">6.1</td><td class="r">2</td><td class="r">21.3%</td><td class="r">58.3%</td><td class="r">3.11倍</td><td class="r">1.30</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率21%でレース2番手評価。中団から運ぶ形。加速ラップで結果を出している(3/3)、実績上位。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">瞬発 3/4</span><span class="lt">加速 3/3</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">7</td><td class="no">13</td><td class="nm">フィクセルリリア<small>牝3 55.0kg 吉田 豊</small></td><td>平岩 大典</td><td class="r">10.8</td><td class="r">3</td><td class="r">12.9%</td><td class="r">40.4%</td><td class="r">2.15倍</td><td class="r">1.39</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率13%で3番手、上位2頭に食い下がる形。多頭数の外枠、中団から運ぶ形。実績上位。前走の好走から上積みが見込める。人気以上に評価できる。</p></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">1</td><td class="no">2</td><td class="nm">ヨーゼフ<small>牡3 57.0kg 武藤 雅</small></td><td>戸田 博文</td><td class="r">12.7</td><td class="r">5</td><td class="r">8.0%</td><td class="r">26.9%</td><td class="r">1.43倍</td><td class="r">1.02</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。ブリンカー着用で後方から。道悪巧者(1/3)、持続戦の経験あり(1/3)、地力は平均的。前走の好走から上積みが見込める、間隔を詰めたローテ。オッズ妙味はある。</p><span class="lt">持続 1/3</span><span class="lt bb">道悪 1/3</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">8</td><td class="no">15</td><td class="nm">ゴールデンダガー<small>牡3 57.0kg 横山 琉人</small></td><td>中舘 英二</td><td class="r">11.3</td><td class="r">4</td><td class="r">7.6%</td><td class="r">25.7%</td><td class="r">1.37倍</td><td class="r">0.86</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率8%で上位争いの一角。多頭数の外枠、先行から運ぶ形。上がり勝負に確かな実績(2/4)、実績上位。前走はまずまずの内容、これまで大きく崩れていない。</p><span class="lt">瞬発 2/4</span></td></tr>
+<tr class=""><td class="mk">△◇</td><td class="no">1</td><td class="no">1</td><td class="nm">マイネルオランチア<small>牡3 57.0kg 菊沢 一樹</small></td><td>小手川 準</td><td class="r">15.5</td><td class="r">6</td><td class="r">7.9%</td><td class="r">26.6%</td><td class="r">1.42倍</td><td class="r">1.23</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率8%で上位争いの一角。人気を考えれば妙味は大きい。ブリンカー着用で中団から。持続戦に確かな実績(3/3)、地力はメンバー筆頭格。前走の好走から上積みが見込める、間隔を詰めたローテ、これまで大きく崩れていない。オッズ妙味はある。</p><span class="lt">持続 3/3</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">11</td><td class="nm">レッドフリーマン<small>牡3 57.0kg 池添 謙一</small></td><td>大竹 正博</td><td class="r">15.7</td><td class="r">7</td><td class="r">2.4%</td><td class="r">8.6%</td><td class="r">0.46倍</td><td class="r">0.38</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">オートカリテ<small>牝3 55.0kg M.ミシェル</small></td><td>牧 光二</td><td class="r">17.0</td><td class="r">8</td><td class="r">3.4%</td><td class="r">12.0%</td><td class="r">0.64倍</td><td class="r">0.57</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">ロンバルドシチー<small>牡3 56.0kg ☆ 長浜 鴻緒</small></td><td>奥平 雅士</td><td class="r">17.5</td><td class="r">9</td><td class="r">1.4%</td><td class="r">5.0%</td><td class="r">0.27倍</td><td class="r">0.24</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">タニセンローマ<small>牡3 57.0kg 松山 弘平</small></td><td>斎藤 誠</td><td class="r">19.3</td><td class="r">10</td><td class="r">1.8%</td><td class="r">6.6%</td><td class="r">0.35倍</td><td class="r">0.35</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">ギャニミード<small>牝3 55.0kg 杉原 誠人</small></td><td>木村 哲也</td><td class="r">22.2</td><td class="r">11</td><td class="r">1.1%</td><td class="r">4.1%</td><td class="r">0.22倍</td><td class="r">0.25</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">5</td><td class="nm">ヨドノサファイア<small>牝3 55.0kg 丹内 祐次</small></td><td>稲垣 幸雄</td><td class="r">22.9</td><td class="r">12</td><td class="r">1.7%</td><td class="r">6.1%</td><td class="r">0.33倍</td><td class="r">0.39</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">14</td><td class="nm">オウケンサクラコ<small>牝3 55.0kg 丸田 恭介</small></td><td>田中 勝春</td><td class="r">24.0</td><td class="r">13</td><td class="r">1.4%</td><td class="r">5.0%</td><td class="r">0.26倍</td><td class="r">0.33</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">6</td><td class="nm">パワポケウォーズ<small>牡3 54.0kg ▲ 上里 直汰</small></td><td>大和田 成</td><td class="r">25.4</td><td class="r">14</td><td class="r">1.2%</td><td class="r">4.2%</td><td class="r">0.22倍</td><td class="r">0.29</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">16</td><td class="nm">ディープマウンテン<small>牝3 55.0kg 大野 拓弥</small></td><td>深山 雅史</td><td class="r">44.3</td><td class="r">15</td><td class="r">0.8%</td><td class="r">2.9%</td><td class="r">0.16倍</td><td class="r">0.36</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">10</td><td class="nm">ヤマトスイフト<small>牝3 55.0kg 内田 博幸</small></td><td>中舘 英二</td><td class="r">47.8</td><td class="r">16</td><td class="r">0.3%</td><td class="r">0.9%</td><td class="r">0.05倍</td><td class="r">0.12</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：M</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：平均</span><span class="tag v">妙味：◇1頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r7">
 <div class="rh"><span class="no">7R</span>3歳以上1勝クラス</div>
-<div class="rsub">1勝クラス / 1600m / 芝 / 右 外 / 16頭</div>
-<div class="pace"><b>想定ペース</b> ややH<br><b>ラップ傾向</b> — / 3/3 / — / —<br><b>馬場</b> —</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">3</td><td class="no">5</td><td class="nm">ダノンアスコルティ<small>牝3 54.0kg</small></td><td>岩田 望来</td><td class="r">4.4</td><td class="r">1</td><td class="r">24.2%</td><td class="r">62.1%</td><td class="r">3.31倍</td><td class="r">1.06</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率24%でレース最上位、本命に推す。先行勢には忙しい流れだが、速い決着自体は苦にしない。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">8</td><td class="no">15</td><td class="nm">タイセイアストロ<small>牡3 56.0kg</small></td><td>杉原 誠人</td><td class="r">6.2</td><td class="r">2</td><td class="r">23.1%</td><td class="r">60.4%</td><td class="r">3.22倍</td><td class="r">1.43</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率23%でレース2番手評価。後方から展開に恵まれ、ペース適性も後押しする。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格、多頭数の外枠は割引が必要。前走の好走から上積みが見込める、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">4</td><td class="no">7</td><td class="nm">ダイヤテソーロ<small>牝3 54.0kg</small></td><td>木幡 巧也</td><td class="r">10.2</td><td class="r">5</td><td class="r">9.8%</td><td class="r">31.5%</td><td class="r">1.68倍</td><td class="r">1.00</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率10%で3番手、上位2頭に食い下がる形。中団から運ぶ形。持続戦の経験あり、流れは味方(1/3)、地力は平均的。前走はまずまずの内容。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">4</td><td class="no">8</td><td class="nm">ベアサナエチャン<small>牝3 54.0kg</small></td><td>松山 弘平</td><td class="r">10.1</td><td class="r">4</td><td class="r">8.8%</td><td class="r">28.8%</td><td class="r">1.54倍</td><td class="r">0.89</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。中団から運ぶ形。持続戦に確かな実績、流れは味方(3/4)、実績上位、鞍上は信頼できる。前走はまずまずの内容、これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">8</td><td class="no">16</td><td class="nm">スワローシチー<small>牡4 58.0kg</small></td><td>田辺 裕信</td><td class="r">11.7</td><td class="r">6</td><td class="r">7.2%</td><td class="r">23.8%</td><td class="r">1.27倍</td><td class="r">0.84</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率7%で上位争いの一角。後方から展開に恵まれ、ペース適性も後押しする。加速ラップで結果を出している(2/4)、地力ではやや見劣る、斤量は楽ではない、多頭数の外枠は割引が必要。前走はまずまずの内容。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">6</td><td class="no">11</td><td class="nm">ナハトナナレオン<small>牝3 54.0kg</small></td><td>横山 武史</td><td class="r">12.8</td><td class="r">7</td><td class="r">4.6%</td><td class="r">15.8%</td><td class="r">0.84倍</td><td class="r">0.59</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率5%で上位争いの一角。中団から運ぶ形。持続戦の経験あり、流れは味方(1/3)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。人気を考えるとやや割高。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">9</td><td class="nm">ファンクション<small>牝3 54.0kg</small></td><td>武 豊</td><td class="r">7.1</td><td class="r">3</td><td class="r">5.6%</td><td class="r">19.1%</td><td class="r">1.02倍</td><td class="r">0.40</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">6</td><td class="nm">ミスターマーボー<small>牡3 56.0kg</small></td><td>原 優介</td><td class="r">18.7</td><td class="r">8</td><td class="r">3.9%</td><td class="r">13.6%</td><td class="r">0.73倍</td><td class="r">0.74</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ラヴスコール<small>牝5 56.0kg</small></td><td>鮫島 克駿</td><td class="r">19.9</td><td class="r">9</td><td class="r">4.1%</td><td class="r">14.3%</td><td class="r">0.76倍</td><td class="r">0.82</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">10</td><td class="nm">シャオママル<small>牡3 56.0kg</small></td><td>丸田 恭介</td><td class="r">20.8</td><td class="r">10</td><td class="r">2.9%</td><td class="r">10.3%</td><td class="r">0.55倍</td><td class="r">0.61</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">ノーブルライナー<small>牡4 58.0kg</small></td><td>丹内 祐次</td><td class="r">21.3</td><td class="r">11</td><td class="r">1.5%</td><td class="r">5.2%</td><td class="r">0.28倍</td><td class="r">0.31</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">スペードギニー<small>せん4 56.0kg</small></td><td>△ 石神 深道</td><td class="r">22.4</td><td class="r">12</td><td class="r">1.1%</td><td class="r">3.8%</td><td class="r">0.20倍</td><td class="r">0.24</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">ツインピークス<small>牝4 54.0kg</small></td><td>◇ 小林 美駒</td><td class="r">23.5</td><td class="r">13</td><td class="r">1.2%</td><td class="r">4.2%</td><td class="r">0.23倍</td><td class="r">0.28</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">13</td><td class="nm">ソレエスピアージャ<small>牝4 56.0kg</small></td><td>M.ミシェル</td><td class="r">27.1</td><td class="r">14</td><td class="r">0.6%</td><td class="r">2.1%</td><td class="r">0.11倍</td><td class="r">0.16</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">2</td><td class="nm">スマイルカーブ<small>牝3 54.0kg</small></td><td>菊沢 一樹</td><td class="r">30.1</td><td class="r">15</td><td class="r">0.8%</td><td class="r">3.0%</td><td class="r">0.16倍</td><td class="r">0.25</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">14</td><td class="nm">クリノゴッホ<small>せん6 56.0kg</small></td><td>△ 石田 拓郎</td><td class="r">86.3</td><td class="r">16</td><td class="r">0.5%</td><td class="r">2.0%</td><td class="r">0.10倍</td><td class="r">0.47</td></tr>
+<div class="meta">1勝クラス / 1600m / 芝 / 右 外 / 16頭</div>
+<div><span class="pill">想定ペース やや速い</span><span class="pill lap">ラップ傾向 標準・平坦</span><span class="pill lap">流れ 標準 76%</span><span class="pill lap">上がり 11.65秒/F</span><span class="pill">n=100</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">3</td><td class="no">5</td><td class="nm">ダノンアスコルティ<small>牝3 54.0kg 岩田 望来</small></td><td>森 一誠</td><td class="r">5.4</td><td class="r">1</td><td class="r">23.5%</td><td class="r">60.9%</td><td class="r">3.25倍</td><td class="r">1.27</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率23%でレース最上位、本命に推す。先行勢には忙しい流れだが、速い決着自体は苦にしない。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">瞬発 3/3</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">8</td><td class="no">15</td><td class="nm">タイセイアストロ<small>牡3 56.0kg 杉原 誠人</small></td><td>森 一誠</td><td class="r">6.8</td><td class="r">2</td><td class="r">22.4%</td><td class="r">59.3%</td><td class="r">3.16倍</td><td class="r">1.52</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率22%でレース2番手評価。後方から展開に恵まれ、ペース適性も後押しする。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格、多頭数の外枠は割引が必要。前走の好走から上積みが見込める、これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">瞬発 3/3</span><span class="lt">加速 3/3</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">3</td><td class="no">6</td><td class="nm">ミスターマーボー<small>牡3 56.0kg 原 優介</small></td><td>青木 孝文</td><td class="r">8.0</td><td class="r">3</td><td class="r">13.3%</td><td class="r">40.8%</td><td class="r">2.18倍</td><td class="r">1.07</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率13%で3番手、上位2頭に食い下がる形。先行勢にはやや不利な流れ。道悪巧者(3/4)、持続戦に確かな実績、流れは味方(4/5)、実績上位。前走の好走から上積みが見込める、これまで大きく崩れていない。オッズ妙味はある。</p><span class="lt">持続 4/5</span><span class="lt bb">道悪 3/4</span></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">4</td><td class="no">8</td><td class="nm">ベアサナエチャン<small>牝3 54.0kg 松山 弘平</small></td><td>杉浦 宏昭</td><td class="r">11.3</td><td class="r">5</td><td class="r">7.9%</td><td class="r">26.0%</td><td class="r">1.39倍</td><td class="r">0.89</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。中団から運ぶ形。持続戦に確かな実績、流れは味方(3/4)、実績上位、鞍上は信頼できる。前走はまずまずの内容、これまで大きく崩れていない。</p><span class="lt">瞬発 4/4</span><span class="lt">持続 3/4</span><span class="lt">加速 5/5</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">4</td><td class="no">7</td><td class="nm">ダイヤテソーロ<small>牝3 54.0kg 木幡 巧也</small></td><td>牧 光二</td><td class="r">11.6</td><td class="r">6</td><td class="r">7.4%</td><td class="r">24.4%</td><td class="r">1.30倍</td><td class="r">0.86</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率7%で上位争いの一角。中団から運ぶ形。持続戦の経験あり、流れは味方(1/3)、地力は平均的。前走はまずまずの内容。</p><span class="lt">瞬発 2/4</span><span class="lt">持続 1/3</span><span class="lt">加速 2/4</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">6</td><td class="no">11</td><td class="nm">ナハトナナレオン<small>牝3 54.0kg 横山 武史</small></td><td>矢嶋 大樹</td><td class="r">12.0</td><td class="r">7</td><td class="r">4.5%</td><td class="r">15.3%</td><td class="r">0.82倍</td><td class="r">0.54</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率4%で上位争いの一角。中団から運ぶ形。持続戦の経験あり、流れは味方(1/3)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。人気を考えるとやや割高。</p><span class="lt">持続 1/3</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">8</td><td class="no">16</td><td class="nm">スワローシチー<small>牡4 58.0kg 田辺 裕信</small></td><td>相沢 郁</td><td class="r">12.9</td><td class="r">8</td><td class="r">4.5%</td><td class="r">15.4%</td><td class="r">0.82倍</td><td class="r">0.58</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率4%で上位争いの一角。後方から展開に恵まれ、ペース適性も後押しする。加速ラップで結果を出している(2/4)、地力ではやや見劣る、斤量は楽ではない、多頭数の外枠は割引が必要。前走はまずまずの内容。人気を考えるとやや割高。</p><span class="lt">瞬発 1/5</span><span class="lt">加速 2/4</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">9</td><td class="nm">ファンクション<small>牝3 54.0kg 武 豊</small></td><td>斎藤 誠</td><td class="r">10.9</td><td class="r">4</td><td class="r">4.2%</td><td class="r">14.4%</td><td class="r">0.77倍</td><td class="r">0.46</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">ツインピークス<small>牝4 54.0kg ◇ 小林 美駒</small></td><td>千葉 直人</td><td class="r">13.5</td><td class="r">9</td><td class="r">2.9%</td><td class="r">10.2%</td><td class="r">0.54倍</td><td class="r">0.40</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">2</td><td class="nm">スマイルカーブ<small>牝3 54.0kg 菊沢 一樹</small></td><td>小手川 準</td><td class="r">15.7</td><td class="r">10</td><td class="r">2.4%</td><td class="r">8.6%</td><td class="r">0.46倍</td><td class="r">0.38</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">ノーブルライナー<small>牡4 58.0kg 丹内 祐次</small></td><td>中川 公成</td><td class="r">19.1</td><td class="r">11</td><td class="r">1.4%</td><td class="r">5.0%</td><td class="r">0.27倍</td><td class="r">0.27</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ラヴスコール<small>牝5 56.0kg 鮫島 克駿</small></td><td>加藤 征弘</td><td class="r">19.7</td><td class="r">12</td><td class="r">2.3%</td><td class="r">8.2%</td><td class="r">0.44倍</td><td class="r">0.46</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">10</td><td class="nm">シャオママル<small>牡3 56.0kg 丸田 恭介</small></td><td>加藤 士津八</td><td class="r">22.3</td><td class="r">13</td><td class="r">1.6%</td><td class="r">5.6%</td><td class="r">0.30倍</td><td class="r">0.35</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">スペードギニー<small>せん4 56.0kg △ 石神 深道</small></td><td>大和田 成</td><td class="r">24.4</td><td class="r">14</td><td class="r">0.7%</td><td class="r">2.6%</td><td class="r">0.14倍</td><td class="r">0.18</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">13</td><td class="nm">ソレエスピアージャ<small>牝4 56.0kg M.ミシェル</small></td><td>西田 雄一郎</td><td class="r">26.9</td><td class="r">15</td><td class="r">0.4%</td><td class="r">1.4%</td><td class="r">0.08倍</td><td class="r">0.11</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">14</td><td class="nm">クリノゴッホ<small>せん6 56.0kg △ 石田 拓郎</small></td><td>新開 幸一</td><td class="r">111.4</td><td class="r">16</td><td class="r">0.5%</td><td class="r">1.9%</td><td class="r">0.10倍</td><td class="r">0.59</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：ややH</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：やや速い</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r8">
 <div class="rh"><span class="no">8R</span>3歳以上1勝クラス</div>
-<div class="rsub">1勝クラス / 1200m / ダート / 右 / 16頭</div>
-<div class="pace"><b>想定ペース</b> M<br><b>ラップ傾向</b> — / — / — / —<br><b>馬場</b> —</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">8</td><td class="no">16</td><td class="nm">グランルチャドール<small>牡5 58.0kg</small></td><td>石橋 脩</td><td class="r">3.1</td><td class="r">1</td><td class="r">27.7%</td><td class="r">66.9%</td><td class="r">3.57倍</td><td class="r">0.86</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率28%でレース最上位、本命に推す。ブリンカー着用で先行から。実績上位、多頭数の外枠は割引が必要。前走はまずまずの内容、間隔を詰めたローテ、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">1</td><td class="no">1</td><td class="nm">ホウオウルクソール<small>牡3 54.0kg</small></td><td>◇ 今村 聖奈</td><td class="r">7.8</td><td class="r">3</td><td class="r">16.4%</td><td class="r">48.0%</td><td class="r">2.56倍</td><td class="r">1.28</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率16%でレース2番手評価。斤量に恵まれ中団から運べる。道悪巧者(1/4)、地力は平均的、斤量差は有利に働く。前走はまずまずの内容。人気以上に評価できる。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">5</td><td class="no">10</td><td class="nm">エルムラント<small>牡4 58.0kg</small></td><td>三浦 皇成</td><td class="r">3.2</td><td class="r">2</td><td class="r">14.9%</td><td class="r">44.6%</td><td class="r">2.38倍</td><td class="r">0.48</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率15%で3番手、上位2頭に食い下がる形。中団から運ぶ形。地力は平均的、人気先行の感は否めない。前走の好走から上積みが見込める。人気ほどの安心感はない。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">7</td><td class="no">14</td><td class="nm">シルフレイ<small>牝4 56.0kg</small></td><td>横山 和生</td><td class="r">11.2</td><td class="r">5</td><td class="r">9.5%</td><td class="r">30.8%</td><td class="r">1.64倍</td><td class="r">1.07</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。ブリンカー着用で先行から。道悪巧者(3/4)、長く良い脚を使えるのが強み(6/6)、地力はメンバー筆頭格、鞍上は信頼できる。前走はまずまずの内容、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">6</td><td class="nm">リラキトス<small>牡4 56.0kg</small></td><td>◇ 小林 美駒</td><td class="r">11.0</td><td class="r">4</td><td class="r">3.7%</td><td class="r">13.0%</td><td class="r">0.69倍</td><td class="r">0.41</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">13</td><td class="nm">ラルフテソーロ<small>牡4 58.0kg</small></td><td>丹内 祐次</td><td class="r">14.1</td><td class="r">6</td><td class="r">4.2%</td><td class="r">14.4%</td><td class="r">0.77倍</td><td class="r">0.59</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">2</td><td class="nm">テンハートビート<small>牝3 54.0kg</small></td><td>M.ミシェル</td><td class="r">14.8</td><td class="r">7</td><td class="r">4.1%</td><td class="r">14.1%</td><td class="r">0.75倍</td><td class="r">0.61</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">5</td><td class="nm">ペロ<small>牡5 58.0kg</small></td><td>丸山 元気</td><td class="r">20.1</td><td class="r">8</td><td class="r">3.9%</td><td class="r">13.4%</td><td class="r">0.72倍</td><td class="r">0.78</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">クラシオン<small>牡3 56.0kg</small></td><td>菊沢 一樹</td><td class="r">31.4</td><td class="r">9</td><td class="r">3.1%</td><td class="r">10.7%</td><td class="r">0.57倍</td><td class="r">0.96</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">4</td><td class="no">8</td><td class="nm">ブルーユンチェリー<small>牝4 56.0kg</small></td><td>武藤 雅</td><td class="r">39.0</td><td class="r">10</td><td class="r">2.9%</td><td class="r">10.0%</td><td class="r">0.53倍</td><td class="r">1.11</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。中団から運ぶ形。相手強化で分が悪い。</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">6</td><td class="no">11</td><td class="nm">トップマジシャン<small>牡3 56.0kg</small></td><td>内田 博幸</td><td class="r">45.2</td><td class="r">11</td><td class="r">3.1%</td><td class="r">10.8%</td><td class="r">0.57倍</td><td class="r">1.39</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。後方から運ぶ形。持続戦の経験あり(1/4)、地力ではやや見劣る。久々の一戦。</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">8</td><td class="no">15</td><td class="nm">ホウオウプレシャス<small>牡6 55.0kg</small></td><td>▲ 水沼 元輝</td><td class="r">54.0</td><td class="r">12</td><td class="r">2.4%</td><td class="r">8.3%</td><td class="r">0.44倍</td><td class="r">1.28</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。多頭数の外枠、中団から運ぶ形。地力は平均的。前走はまずまずの内容。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">9</td><td class="nm">ニシノヴィヴィ<small>牝5 56.0kg</small></td><td>原 優介</td><td class="r">59.9</td><td class="r">13</td><td class="r">1.3%</td><td class="r">4.7%</td><td class="r">0.25倍</td><td class="r">0.79</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">4</td><td class="no">7</td><td class="nm">レイフロレット<small>牝5 56.0kg</small></td><td>柴田 大知</td><td class="r">115.4</td><td class="r">14</td><td class="r">1.3%</td><td class="r">4.8%</td><td class="r">0.25倍</td><td class="r">1.55</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。中団から運ぶ形。持続戦に確かな実績(2/3)、地力は平均的。</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">2</td><td class="no">4</td><td class="nm">イラーナ<small>牝5 54.0kg</small></td><td>△ 石神 深道</td><td class="r">120.8</td><td class="r">15</td><td class="r">1.0%</td><td class="r">3.5%</td><td class="r">0.19倍</td><td class="r">1.18</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。ブリンカー着用で中団から。長く脚を使った経験あり(1/3)、地力は平均的、斤量差は有利に働く。前走はまずまずの内容。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">コヴェナント<small>牝4 56.0kg</small></td><td>野中 悠太郎</td><td class="r">122.7</td><td class="r">16</td><td class="r">0.6%</td><td class="r">2.0%</td><td class="r">0.11倍</td><td class="r">0.68</td></tr>
+<div class="meta">1勝クラス / 1200m / ダート / 右 / 16頭</div>
+<div><span class="pill">想定ペース 平均</span><span class="pill lap">ラップ傾向 標準・減速</span><span class="pill lap">流れ 標準 73%</span><span class="pill lap">上がり 12.20秒/F</span><span class="pill">n=195</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">8</td><td class="no">16</td><td class="nm">グランルチャドール<small>牡5 58.0kg 石橋 脩</small></td><td>上原 佑紀</td><td class="r">4.8</td><td class="r">1</td><td class="r">27.8%</td><td class="r">66.6%</td><td class="r">3.55倍</td><td class="r">1.34</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率28%でレース最上位、本命に推す。ブリンカー着用で先行から。実績上位、多頭数の外枠は割引が必要。前走はまずまずの内容、間隔を詰めたローテ、キャリア2戦で伸びしろは未知数、これまで大きく崩れていない。人気以上に評価できる。</p></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">1</td><td class="no">1</td><td class="nm">ホウオウルクソール<small>牡3 54.0kg ◇ 今村 聖奈</small></td><td>栗田 徹</td><td class="r">7.0</td><td class="r">4</td><td class="r">14.0%</td><td class="r">42.0%</td><td class="r">2.24倍</td><td class="r">0.98</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率14%でレース2番手評価。斤量に恵まれ中団から運べる。道悪巧者(1/4)、地力は平均的、斤量差は有利に働く。前走はまずまずの内容。オッズ妙味はある。</p><span class="lt bb">道悪 1/4</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">7</td><td class="no">13</td><td class="nm">ラルフテソーロ<small>牡4 58.0kg 丹内 祐次</small></td><td>伊藤 圭三</td><td class="r">5.2</td><td class="r">2</td><td class="r">11.6%</td><td class="r">36.0%</td><td class="r">1.92倍</td><td class="r">0.60</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率12%で3番手だが、展開面はやや割引。ブリンカー着用でハナから。実績上位、多頭数の外枠は割引が必要。人気を考えるとやや割高。</p></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">5</td><td class="no">10</td><td class="nm">エルムラント<small>牡4 58.0kg 三浦 皇成</small></td><td>鹿戸 雄一</td><td class="r">6.2</td><td class="r">3</td><td class="r">10.4%</td><td class="r">32.9%</td><td class="r">1.76倍</td><td class="r">0.65</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率10%と力はあるが、上位とは差がある。中団から運ぶ形。地力は平均的、人気先行の感は否めない。前走の好走から上積みが見込める。人気を考えるとやや割高。</p></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">7</td><td class="no">14</td><td class="nm">シルフレイ<small>牝4 56.0kg 横山 和生</small></td><td>千葉 直人</td><td class="r">9.2</td><td class="r">5</td><td class="r">9.6%</td><td class="r">30.6%</td><td class="r">1.63倍</td><td class="r">0.88</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率10%で上位争いの一角。ブリンカー着用で先行から。道悪巧者(3/4)、長く良い脚を使えるのが強み(6/6)、地力はメンバー筆頭格、鞍上は信頼できる。前走はまずまずの内容、これまで大きく崩れていない。</p><span class="lt">ロンスパ 6/6</span><span class="lt bb">道悪 3/4</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">6</td><td class="nm">リラキトス<small>牡4 56.0kg ◇ 小林 美駒</small></td><td>高木 登</td><td class="r">9.7</td><td class="r">6</td><td class="r">2.4%</td><td class="r">8.3%</td><td class="r">0.44倍</td><td class="r">0.23</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">2</td><td class="nm">テンハートビート<small>牝3 54.0kg M.ミシェル</small></td><td>西田 雄一郎</td><td class="r">13.4</td><td class="r">7</td><td class="r">4.1%</td><td class="r">14.1%</td><td class="r">0.75倍</td><td class="r">0.55</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">クラシオン<small>牡3 56.0kg 菊沢 一樹</small></td><td>菊沢 隆徳</td><td class="r">14.7</td><td class="r">8</td><td class="r">4.0%</td><td class="r">13.6%</td><td class="r">0.72倍</td><td class="r">0.58</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">5</td><td class="nm">ペロ<small>牡5 58.0kg 丸山 元気</small></td><td>浅利 英明</td><td class="r">17.7</td><td class="r">9</td><td class="r">3.0%</td><td class="r">10.5%</td><td class="r">0.56倍</td><td class="r">0.54</td></tr>
+<tr class="dim"><td class="mk">◇</td><td class="no">6</td><td class="no">11</td><td class="nm">トップマジシャン<small>牡3 56.0kg 内田 博幸</small></td><td>石栗 龍彦</td><td class="r">33.1</td><td class="r">10</td><td class="r">3.4%</td><td class="r">11.6%</td><td class="r">0.62倍</td><td class="r">1.11</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。後方から運ぶ形。持続戦の経験あり(1/4)、地力ではやや見劣る。久々の一戦。</p><span class="lt">持続 1/4</span></td></tr>
+<tr class="dim"><td class="mk">◇</td><td class="no">8</td><td class="no">15</td><td class="nm">ホウオウプレシャス<small>牡6 55.0kg ▲ 水沼 元輝</small></td><td>天間 昭一</td><td class="r">40.2</td><td class="r">11</td><td class="r">3.5%</td><td class="r">11.9%</td><td class="r">0.63倍</td><td class="r">1.39</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。多頭数の外枠、中団から運ぶ形。地力は平均的。前走はまずまずの内容。</p></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">9</td><td class="nm">ニシノヴィヴィ<small>牝5 56.0kg 原 優介</small></td><td>矢野 英一</td><td class="r">41.2</td><td class="r">12</td><td class="r">1.7%</td><td class="r">6.1%</td><td class="r">0.32倍</td><td class="r">0.71</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">8</td><td class="nm">ブルーユンチェリー<small>牝4 56.0kg 武藤 雅</small></td><td>水野 貴広</td><td class="r">44.7</td><td class="r">13</td><td class="r">1.7%</td><td class="r">5.9%</td><td class="r">0.31倍</td><td class="r">0.75</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">イラーナ<small>牝5 54.0kg △ 石神 深道</small></td><td>林 徹</td><td class="r">45.4</td><td class="r">14</td><td class="r">1.3%</td><td class="r">4.4%</td><td class="r">0.24倍</td><td class="r">0.57</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">レイフロレット<small>牝5 56.0kg 柴田 大知</small></td><td>和田 雄二</td><td class="r">81.6</td><td class="r">15</td><td class="r">1.0%</td><td class="r">3.6%</td><td class="r">0.19倍</td><td class="r">0.84</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">コヴェナント<small>牝4 56.0kg 野中 悠太郎</small></td><td>佐藤 吉勝</td><td class="r">115.5</td><td class="r">16</td><td class="r">0.6%</td><td class="r">2.0%</td><td class="r">0.11倍</td><td class="r">0.64</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：M</span><span class="tag">ラップ傾向：—</span><span class="tag v">妙味：◇5頭</span></div>
+<div class="tags"><span class="tag">想定ペース：平均</span><span class="tag v">妙味：◇2頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r9">
 <div class="rh"><span class="no">9R</span>習志野特別</div>
-<div class="rsub">2勝クラス / 1800m / 芝 / 右 / 11頭</div>
-<div class="pace"><b>想定ペース</b> ややS<br><b>ラップ傾向</b> — / 3/3 / — / —<br><b>馬場</b> —</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">1</td><td class="no">1</td><td class="nm">イベントホライゾン<small>牡3 55.0kg</small></td><td>松山 弘平</td><td class="r">2.8</td><td class="r">1</td><td class="r">42.7%</td><td class="r">86.4%</td><td class="r">3.17倍</td><td class="r">1.19</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率43%でレース最上位。展開の上積みも見込めるのが決め手。中団から運び、流れは合う。上がり勝負に確かな実績(3/3)、実績上位、鞍上は信頼できる、斤量差は有利に働く。前走の好走から上積みが見込める、久々の一戦、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">2</td><td class="no">2</td><td class="nm">ブルーマエストロ<small>牡4 58.0kg</small></td><td>川田 将雅</td><td class="r">3.5</td><td class="r">2</td><td class="r">16.2%</td><td class="r">55.2%</td><td class="r">2.02倍</td><td class="r">0.57</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率16%でレース2番手評価。内枠を利して中団から。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、長期休養明けで仕上がりが鍵、これまで大きく崩れていない。人気ほどの安心感はない。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">6</td><td class="no">7</td><td class="nm">グロスビーク<small>牡4 58.0kg</small></td><td>津村 明秀</td><td class="r">7.4</td><td class="r">3</td><td class="r">12.4%</td><td class="r">45.5%</td><td class="r">1.67倍</td><td class="r">0.92</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率12%で3番手、上位2頭に食い下がる形。先行から立ち回れる展開。地力は平均的。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">8</td><td class="no">11</td><td class="nm">マイネルアレス<small>牡4 58.0kg</small></td><td>岩田 望来</td><td class="r">7.4</td><td class="r">3</td><td class="r">12.4%</td><td class="r">45.3%</td><td class="r">1.66倍</td><td class="r">0.92</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率13%と力はあるが、上位とは差がある。ブリンカー着用で中団から。道悪巧者(3/4)、上がり勝負に確かな実績(10/12)、実績上位、鞍上は信頼できる。前走はまずまずの内容、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">5</td><td class="no">5</td><td class="nm">スナークピカソ<small>牡4 58.0kg</small></td><td>丹内 祐次</td><td class="r">19.4</td><td class="r">7</td><td class="r">4.5%</td><td class="r">18.2%</td><td class="r">0.67倍</td><td class="r">0.86</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率4%で上位争いの一角。先行から立ち回れる展開。道悪巧者(1/3)、上がり勝負に確かな実績(2/4)、地力は平均的。前走はまずまずの内容。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">トレサフィール<small>せん4 58.0kg</small></td><td>横山 武史</td><td class="r">8.7</td><td class="r">5</td><td class="r">1.7%</td><td class="r">7.2%</td><td class="r">0.26倍</td><td class="r">0.15</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">4</td><td class="nm">グランカンタンテ<small>牝5 56.0kg</small></td><td>三浦 皇成</td><td class="r">14.4</td><td class="r">6</td><td class="r">5.2%</td><td class="r">21.1%</td><td class="r">0.77倍</td><td class="r">0.75</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">6</td><td class="nm">ヤマニンガラッシア<small>牡9 58.0kg</small></td><td>大野 拓弥</td><td class="r">22.1</td><td class="r">8</td><td class="r">2.7%</td><td class="r">11.4%</td><td class="r">0.42倍</td><td class="r">0.61</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">10</td><td class="nm">ワンモアスマイル<small>せん4 58.0kg</small></td><td>岩田 康誠</td><td class="r">29.1</td><td class="r">9</td><td class="r">1.0%</td><td class="r">4.3%</td><td class="r">0.16倍</td><td class="r">0.29</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">9</td><td class="nm">レッセパッセ<small>牝5 56.0kg</small></td><td>菊沢 一樹</td><td class="r">51.2</td><td class="r">10</td><td class="r">1.0%</td><td class="r">4.2%</td><td class="r">0.15倍</td><td class="r">0.50</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">8</td><td class="nm">ホークマン<small>牡5 58.0kg</small></td><td>柴田 大知</td><td class="r">84.4</td><td class="r">11</td><td class="r">0.3%</td><td class="r">1.1%</td><td class="r">0.04倍</td><td class="r">0.22</td></tr>
+<div class="meta">2勝クラス / 1800m / 芝 / 右 / 11頭</div>
+<div><span class="pill">想定ペース やや遅い</span><span class="pill lap">ラップ傾向 ロンスパ・平坦＋瞬発</span><span class="pill lap">流れ 標準 55%</span><span class="pill lap">上がり 11.76秒/F</span><span class="pill">n=48</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">1</td><td class="no">1</td><td class="nm">イベントホライゾン<small>牡3 55.0kg 松山 弘平</small></td><td>池江 泰寿</td><td class="r">2.7</td><td class="r">1</td><td class="r">44.9%</td><td class="r">87.7%</td><td class="r">3.22倍</td><td class="r">1.21</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率45%でレース最上位。展開の上積みも見込めるのが決め手。中団から運び、流れは合う。上がり勝負に確かな実績(3/3)、実績上位、鞍上は信頼できる、斤量差は有利に働く。前走の好走から上積みが見込める、久々の一戦、これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">瞬発 3/3</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">2</td><td class="no">2</td><td class="nm">ブルーマエストロ<small>牡4 58.0kg 川田 将雅</small></td><td>黒岩 陽一</td><td class="r">4.0</td><td class="r">2</td><td class="r">17.0%</td><td class="r">57.7%</td><td class="r">2.12倍</td><td class="r">0.68</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率17%でレース2番手評価。内枠を利して中団から。上がり勝負に確かな実績(3/3)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、長期休養明けで仕上がりが鍵、これまで大きく崩れていない。人気を考えるとやや割高。</p><span class="lt">瞬発 3/3</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">8</td><td class="no">11</td><td class="nm">マイネルアレス<small>牡4 58.0kg 岩田 望来</small></td><td>相沢 郁</td><td class="r">8.0</td><td class="r">4</td><td class="r">10.9%</td><td class="r">41.4%</td><td class="r">1.52倍</td><td class="r">0.87</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率11%で3番手だが、展開面はやや割引。ブリンカー着用で中団から。道悪巧者(3/4)、上がり勝負に確かな実績(10/12)、実績上位、鞍上は信頼できる。前走はまずまずの内容、これまで大きく崩れていない。</p><span class="lt">ロンスパ 3/3</span><span class="lt">瞬発 10/12</span><span class="lt">加速 7/9</span><span class="lt bb">道悪 3/4</span></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">6</td><td class="no">7</td><td class="nm">グロスビーク<small>牡4 58.0kg 津村 明秀</small></td><td>田中 博康</td><td class="r">9.1</td><td class="r">5</td><td class="r">7.5%</td><td class="r">30.3%</td><td class="r">1.11倍</td><td class="r">0.69</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。先行から立ち回れる展開。地力は平均的。人気を考えるとやや割高。</p></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">5</td><td class="no">5</td><td class="nm">スナークピカソ<small>牡4 58.0kg 丹内 祐次</small></td><td>高橋 一哉</td><td class="r">17.1</td><td class="r">7</td><td class="r">4.7%</td><td class="r">19.5%</td><td class="r">0.72倍</td><td class="r">0.80</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率5%で上位争いの一角。先行から立ち回れる展開。道悪巧者(1/3)、上がり勝負に確かな実績(2/4)、地力は平均的。前走はまずまずの内容。</p><span class="lt">ロンスパ 1/3</span><span class="lt">瞬発 2/4</span><span class="lt bb">道悪 1/3</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">トレサフィール<small>せん4 58.0kg 横山 武史</small></td><td>稲垣 幸雄</td><td class="r">6.3</td><td class="r">3</td><td class="r">4.8%</td><td class="r">19.8%</td><td class="r">0.73倍</td><td class="r">0.30</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">4</td><td class="nm">グランカンタンテ<small>牝5 56.0kg 三浦 皇成</small></td><td>鹿戸 雄一</td><td class="r">15.4</td><td class="r">6</td><td class="r">5.5%</td><td class="r">22.6%</td><td class="r">0.83倍</td><td class="r">0.84</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">10</td><td class="nm">ワンモアスマイル<small>せん4 58.0kg 岩田 康誠</small></td><td>藤岡 健一</td><td class="r">20.0</td><td class="r">8</td><td class="r">1.4%</td><td class="r">5.9%</td><td class="r">0.22倍</td><td class="r">0.27</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">6</td><td class="nm">ヤマニンガラッシア<small>牡9 58.0kg 大野 拓弥</small></td><td>辻 哲英</td><td class="r">24.3</td><td class="r">9</td><td class="r">2.2%</td><td class="r">9.4%</td><td class="r">0.34倍</td><td class="r">0.53</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">9</td><td class="nm">レッセパッセ<small>牝5 56.0kg 菊沢 一樹</small></td><td>柄崎 将寿</td><td class="r">45.3</td><td class="r">10</td><td class="r">1.0%</td><td class="r">4.5%</td><td class="r">0.16倍</td><td class="r">0.46</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">8</td><td class="nm">ホークマン<small>牡5 58.0kg 柴田 大知</small></td><td>粕谷 昌央</td><td class="r">108.0</td><td class="r">11</td><td class="r">0.3%</td><td class="r">1.2%</td><td class="r">0.04倍</td><td class="r">0.30</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：ややS</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：やや遅い</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r10">
 <div class="rh"><span class="no">10R</span>初風ステークス</div>
-<div class="rsub">3勝クラス / 1200m / ダート / 右 / 10頭</div>
-<div class="pace"><b>想定ペース</b> S<br><b>ラップ傾向</b> — / — / — / —<br><b>馬場</b> —</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">8</td><td class="no">9</td><td class="nm">アシャカトベ<small>牡4 58.0kg</small></td><td>横山 武史</td><td class="r">4.2</td><td class="r">1</td><td class="r">39.6%</td><td class="r">85.8%</td><td class="r">2.86倍</td><td class="r">1.66</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率40%でレース最上位、本命に推す。先行から立ち回れる展開。地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、長期休養明けで仕上がりが鍵、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">2</td><td class="no">2</td><td class="nm">ドンレパルス<small>牡7 58.0kg</small></td><td>三浦 皇成</td><td class="r">4.7</td><td class="r">2</td><td class="r">24.8%</td><td class="r">72.5%</td><td class="r">2.42倍</td><td class="r">1.16</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率25%でレース2番手評価。ブリンカー着用で中団から。長く良い脚を使えるのが強み(5/7)、実績上位。前走はまずまずの内容、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">7</td><td class="no">8</td><td class="nm">ワンダラー<small>牡4 58.0kg</small></td><td>丹内 祐次</td><td class="r">5.4</td><td class="r">3</td><td class="r">12.3%</td><td class="r">46.4%</td><td class="r">1.55倍</td><td class="r">0.66</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率12%で3番手だが、展開面はやや割引。中団から運ぶが流れは向かない。長く良い脚を使えるのが強み(5/9)、実績上位。これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">8</td><td class="no">10</td><td class="nm">イリフィ<small>牝4 56.0kg</small></td><td>川田 将雅</td><td class="r">5.4</td><td class="r">3</td><td class="r">11.0%</td><td class="r">42.5%</td><td class="r">1.42倍</td><td class="r">0.60</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率10%と力はあるが、上位とは差がある。外枠だが中団から運ぶ形。道悪巧者(1/4)、地力は平均的、鞍上は信頼できる。前走はまずまずの内容。人気を考えるとやや割高。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">5</td><td class="nm">アデランテ<small>せん5 58.0kg</small></td><td>吉田 豊</td><td class="r">6.1</td><td class="r">5</td><td class="r">3.3%</td><td class="r">14.1%</td><td class="r">0.47倍</td><td class="r">0.20</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">コパノヴィンセント<small>牡4 58.0kg</small></td><td>柴田 大知</td><td class="r">7.0</td><td class="r">6</td><td class="r">2.1%</td><td class="r">9.0%</td><td class="r">0.30倍</td><td class="r">0.15</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">4</td><td class="nm">スプランドゥール<small>牡5 58.0kg</small></td><td>石神 深道</td><td class="r">21.0</td><td class="r">7</td><td class="r">3.7%</td><td class="r">15.7%</td><td class="r">0.52倍</td><td class="r">0.78</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">7</td><td class="nm">メイショウコバト<small>牝6 56.0kg</small></td><td>石橋 脩</td><td class="r">26.7</td><td class="r">8</td><td class="r">1.7%</td><td class="r">7.2%</td><td class="r">0.24倍</td><td class="r">0.45</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">6</td><td class="nm">ポッドソル<small>牡4 58.0kg</small></td><td>丸山 元気</td><td class="r">30.7</td><td class="r">9</td><td class="r">0.6%</td><td class="r">2.8%</td><td class="r">0.09倍</td><td class="r">0.20</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">パルデンス<small>牡8 58.0kg</small></td><td>小林 凌大</td><td class="r">70.7</td><td class="r">10</td><td class="r">0.9%</td><td class="r">3.9%</td><td class="r">0.13倍</td><td class="r">0.63</td></tr>
+<div class="meta">3勝クラス / 1200m / ダート / 右 / 10頭</div>
+<div><span class="pill">想定ペース スロー</span><span class="pill lap">ラップ傾向 ロンスパ・減速</span><span class="pill lap">流れ 標準 92%</span><span class="pill lap">上がり 12.07秒/F</span><span class="pill">n=195</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">7</td><td class="no">8</td><td class="nm">ワンダラー<small>牡4 58.0kg 丹内 祐次</small></td><td>黒岩 陽一</td><td class="r">4.5</td><td class="r">1</td><td class="r">34.1%</td><td class="r">82.1%</td><td class="r">2.74倍</td><td class="r">1.54</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">展開面の減点を受けてなお勝率34%で最上位、地力で押し切る形。中団から運ぶが流れは向かない。長く良い脚を使えるのが強み(5/9)、実績上位。これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">ロンスパ 5/9</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">8</td><td class="no">10</td><td class="nm">イリフィ<small>牝4 56.0kg 川田 将雅</small></td><td>高野 友和</td><td class="r">4.5</td><td class="r">1</td><td class="r">28.8%</td><td class="r">77.2%</td><td class="r">2.57倍</td><td class="r">1.29</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率29%でレース2番手評価、展開の後押しもある。外枠だが中団から運ぶ形。道悪巧者(1/4)、地力は平均的、鞍上は信頼できる。前走はまずまずの内容。人気以上に評価できる。</p><span class="lt bb">道悪 1/4</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">2</td><td class="no">2</td><td class="nm">ドンレパルス<small>牡7 58.0kg 三浦 皇成</small></td><td>高木 登</td><td class="r">4.9</td><td class="r">3</td><td class="r">17.2%</td><td class="r">59.1%</td><td class="r">1.97倍</td><td class="r">0.84</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率17%で3番手だが、展開面はやや割引。ブリンカー着用で中団から。長く良い脚を使えるのが強み(5/7)、実績上位。前走はまずまずの内容、これまで大きく崩れていない。</p><span class="lt">ロンスパ 5/7</span></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">8</td><td class="no">9</td><td class="nm">アシャカトベ<small>牡4 58.0kg 横山 武史</small></td><td>小笠 倫弘</td><td class="r">5.1</td><td class="r">4</td><td class="r">7.8%</td><td class="r">30.9%</td><td class="r">1.03倍</td><td class="r">0.40</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。先行から立ち回れる展開。地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、長期休養明けで仕上がりが鍵、これまで大きく崩れていない。人気ほどの安心感はない。</p></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">5</td><td class="nm">アデランテ<small>せん5 58.0kg 吉田 豊</small></td><td>菊川 正達</td><td class="r">6.9</td><td class="r">5</td><td class="r">3.3%</td><td class="r">13.8%</td><td class="r">0.46倍</td><td class="r">0.23</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">コパノヴィンセント<small>牡4 58.0kg 柴田 大知</small></td><td>上原 博之</td><td class="r">7.5</td><td class="r">6</td><td class="r">2.1%</td><td class="r">8.8%</td><td class="r">0.29倍</td><td class="r">0.16</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">4</td><td class="nm">スプランドゥール<small>牡5 58.0kg 石神 深道</small></td><td>和田 雄二</td><td class="r">18.1</td><td class="r">7</td><td class="r">3.7%</td><td class="r">15.4%</td><td class="r">0.51倍</td><td class="r">0.67</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">6</td><td class="nm">ポッドソル<small>牡4 58.0kg 丸山 元気</small></td><td>手塚 貴徳</td><td class="r">28.3</td><td class="r">8</td><td class="r">0.9%</td><td class="r">3.8%</td><td class="r">0.13倍</td><td class="r">0.25</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">7</td><td class="nm">メイショウコバト<small>牝6 56.0kg 石橋 脩</small></td><td>和田 勇介</td><td class="r">30.2</td><td class="r">9</td><td class="r">1.2%</td><td class="r">5.2%</td><td class="r">0.17倍</td><td class="r">0.37</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">パルデンス<small>牡8 58.0kg 小林 凌大</small></td><td>森 一誠</td><td class="r">53.1</td><td class="r">10</td><td class="r">0.9%</td><td class="r">3.8%</td><td class="r">0.13倍</td><td class="r">0.47</td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：S</span><span class="tag">ラップ傾向：—</span></div>
+<div class="tags"><span class="tag">想定ペース：スロー</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
-<div class="rh"><span class="no">11R</span>朝日杯セントライト記念 <span class="rsub">g2</span></div>
-<div class="rsub">オープン / 2200m / 芝 / 右 外 / 16頭</div>
-<div class="pace"><b>想定ペース</b> M<br><b>ラップ傾向</b> — / 3/4 / — / 2/3<br><b>馬場</b> —</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">4</td><td class="no">8</td><td class="nm">ゴーイントゥスカイ<small>牡3 57.0kg</small></td><td>武 豊</td><td class="r">4.4</td><td class="r">1</td><td class="r">22.0%</td><td class="r">57.5%</td><td class="r">3.07倍</td><td class="r">0.97</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率22%でレース最上位、本命に推す。後方から運ぶ形。上がり勝負に確かな実績(3/4)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">3</td><td class="no">5</td><td class="nm">アスクエジンバラ<small>牡3 57.0kg</small></td><td>岩田 康誠</td><td class="r">4.8</td><td class="r">2</td><td class="r">20.0%</td><td class="r">54.0%</td><td class="r">2.88倍</td><td class="r">0.96</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率20%でレース2番手評価。中団から運ぶ形。長く良い脚を使えるのが強み(2/4)、地力は平均的、人気先行の感は否めない。これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">5</td><td class="no">10</td><td class="nm">バステール<small>牡3 57.0kg</small></td><td>川田 将雅</td><td class="r">5.4</td><td class="r">3</td><td class="r">9.7%</td><td class="r">30.4%</td><td class="r">1.62倍</td><td class="r">0.52</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率10%で3番手だが、展開面はやや割引。後方から運ぶ形。上がり勝負に確かな実績(3/4)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。人気を考えるとやや割高。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">1</td><td class="no">2</td><td class="nm">アウダーシア<small>牡3 57.0kg</small></td><td>津村 明秀</td><td class="r">9.5</td><td class="r">6</td><td class="r">9.7%</td><td class="r">30.4%</td><td class="r">1.62倍</td><td class="r">0.92</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。内枠を利して後方から。上がり勝負に確かな実績(3/4)、実績上位。これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">5</td><td class="no">9</td><td class="nm">サノノグレーター<small>牡3 57.0kg</small></td><td>田辺 裕信</td><td class="r">6.2</td><td class="r">4</td><td class="r">8.3%</td><td class="r">26.7%</td><td class="r">1.42倍</td><td class="r">0.52</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率8%で上位争いの一角、展開次第で浮上も。後方から運ぶ形。長く良い脚を使えるのが強み(2/3)、地力は平均的、流れが向くかは微妙。前走の好走から上積みが見込める、これまで大きく崩れていない。人気を考えるとやや割高。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">3</td><td class="no">6</td><td class="nm">サヴォアフェール<small>牡3 57.0kg</small></td><td>松山 弘平</td><td class="r">6.7</td><td class="r">5</td><td class="r">9.2%</td><td class="r">29.0%</td><td class="r">1.55倍</td><td class="r">0.61</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率9%で上位争いの一角。中団から運ぶ形。長く良い脚を使えるのが強み(3/3)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。人気を考えるとやや割高。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">8</td><td class="no">16</td><td class="nm">ラディアントスター<small>牡3 57.0kg</small></td><td>池添 謙一</td><td class="r">19.9</td><td class="r">7</td><td class="r">5.3%</td><td class="r">17.7%</td><td class="r">0.94倍</td><td class="r">1.06</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率5%で上位争いの一角。多頭数の外枠、中団から運ぶ形。持続戦に確かな実績(3/3)、地力はメンバー筆頭格。前走の好走から上積みが見込める、久々の一戦、これまで大きく崩れていない。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">ラージアンサンブル<small>牡3 57.0kg</small></td><td>岩田 望来</td><td class="r">27.1</td><td class="r">8</td><td class="r">3.9%</td><td class="r">13.2%</td><td class="r">0.70倍</td><td class="r">1.06</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">15</td><td class="nm">エリプティクカーブ<small>牡3 57.0kg</small></td><td>横山 武史</td><td class="r">35.0</td><td class="r">9</td><td class="r">2.0%</td><td class="r">7.0%</td><td class="r">0.37倍</td><td class="r">0.71</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">リッツパーティー<small>牡3 57.0kg</small></td><td>丹内 祐次</td><td class="r">41.0</td><td class="r">10</td><td class="r">1.8%</td><td class="r">6.2%</td><td class="r">0.33倍</td><td class="r">0.74</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">ジャスティンシカゴ<small>牡3 57.0kg</small></td><td>原 優介</td><td class="r">43.8</td><td class="r">11</td><td class="r">0.9%</td><td class="r">3.0%</td><td class="r">0.16倍</td><td class="r">0.38</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ウェイクフィールド<small>牡3 57.0kg</small></td><td>横山 和生</td><td class="r">61.2</td><td class="r">12</td><td class="r">1.6%</td><td class="r">5.7%</td><td class="r">0.30倍</td><td class="r">1.00</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">2</td><td class="no">3</td><td class="nm">バドリナート<small>牡3 57.0kg</small></td><td>丸山 元気</td><td class="r">70.5</td><td class="r">13</td><td class="r">1.6%</td><td class="r">5.6%</td><td class="r">0.30倍</td><td class="r">1.15</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。内枠を利して先行から。地力は平均的、人気薄だが力は足りる。前走の好走から上積みが見込める、これまで大きく崩れていない。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">11</td><td class="nm">ミリオンクラウン<small>牡3 57.0kg</small></td><td>横山 典弘</td><td class="r">73.1</td><td class="r">14</td><td class="r">1.0%</td><td class="r">3.4%</td><td class="r">0.18倍</td><td class="r">0.70</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">7</td><td class="no">13</td><td class="nm">フウセン<small>牡3 57.0kg</small></td><td>鮫島 克駿</td><td class="r">108.1</td><td class="r">15</td><td class="r">2.0%</td><td class="r">7.1%</td><td class="r">0.38倍</td><td class="r">2.22</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。多頭数の外枠、後方から運ぶ形。上がり勝負に確かな実績(5/5)、実績上位、人気薄だが力は足りる。前走の好走から上積みが見込める、これまで大きく崩れていない。</td></tr>
-<tr class="dim"><td class="mk">◇</td><td class="no">7</td><td class="no">14</td><td class="nm">ティラーノ<small>牡3 57.0kg</small></td><td>石橋 脩</td><td class="r">189.6</td><td class="r">16</td><td class="r">0.9%</td><td class="r">3.2%</td><td class="r">0.17倍</td><td class="r">1.74</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。多頭数の外枠、中団から運ぶ形。持続戦の経験あり(1/3)、相手強化で分が悪い。</td></tr>
+<div class="race" id="r11">
+<div class="rh"><span class="no">11R</span>朝日杯セントライト記念 <span class="meta">g2</span></div>
+<div class="meta">オープン / 2200m / 芝 / 右 外 / 16頭</div>
+<div><span class="pill">想定ペース 平均</span><span class="pill lap">ラップ傾向 ロンスパ・平坦</span><span class="pill lap">流れ 標準 75%</span><span class="pill lap">上がり 11.79秒/F</span><span class="pill">n=30</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">4</td><td class="no">8</td><td class="nm">ゴーイントゥスカイ<small>牡3 57.0kg 武 豊</small></td><td>上原 佑紀</td><td class="r">4.1</td><td class="r">1</td><td class="r">22.3%</td><td class="r">57.6%</td><td class="r">3.07倍</td><td class="r">0.91</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率22%でレース最上位、本命に推す。後方から運ぶ形。上がり勝負に確かな実績(3/4)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。オッズ妙味はある。</p><span class="lt">瞬発 3/4</span><span class="lt">加速 2/3</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">5</td><td class="no">10</td><td class="nm">バステール<small>牡3 57.0kg 川田 将雅</small></td><td>斉藤 崇史</td><td class="r">5.3</td><td class="r">2</td><td class="r">15.7%</td><td class="r">45.0%</td><td class="r">2.40倍</td><td class="r">0.83</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率16%でレース2番手評価。後方から運ぶ形。上がり勝負に確かな実績(3/4)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。</p><span class="lt">瞬発 3/4</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">3</td><td class="no">5</td><td class="nm">アスクエジンバラ<small>牡3 57.0kg 岩田 康誠</small></td><td>福永 祐一</td><td class="r">5.4</td><td class="r">3</td><td class="r">12.6%</td><td class="r">37.9%</td><td class="r">2.02倍</td><td class="r">0.68</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率13%で3番手、上位2頭に食い下がる形。中団から運ぶ形。長く良い脚を使えるのが強み(2/4)、地力は平均的、人気先行の感は否めない。これまで大きく崩れていない。人気を考えるとやや割高。</p><span class="lt">ロンスパ 2/4</span><span class="lt">瞬発 2/5</span></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">3</td><td class="no">6</td><td class="nm">サヴォアフェール<small>牡3 57.0kg 松山 弘平</small></td><td>杉山 晴紀</td><td class="r">6.9</td><td class="r">4</td><td class="r">10.5%</td><td class="r">32.4%</td><td class="r">1.73倍</td><td class="r">0.72</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率11%と力はあるが、上位とは差がある。中団から運ぶ形。長く良い脚を使えるのが強み(3/3)、地力はメンバー筆頭格、鞍上は信頼できる。前走の好走から上積みが見込める、これまで大きく崩れていない。</p><span class="lt">ロンスパ 3/3</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">5</td><td class="no">9</td><td class="nm">サノノグレーター<small>牡3 57.0kg 田辺 裕信</small></td><td>尾形 和幸</td><td class="r">7.0</td><td class="r">5</td><td class="r">7.5%</td><td class="r">24.1%</td><td class="r">1.29倍</td><td class="r">0.53</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率8%で上位争いの一角、展開次第で浮上も。後方から運ぶ形。長く良い脚を使えるのが強み(2/3)、地力は平均的、流れが向くかは微妙。前走の好走から上積みが見込める、これまで大きく崩れていない。人気を考えるとやや割高。</p><span class="lt">ロンスパ 2/3</span><span class="lt">瞬発 0/3</span></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">1</td><td class="no">2</td><td class="nm">アウダーシア<small>牡3 57.0kg 津村 明秀</small></td><td>手塚 貴久</td><td class="r">10.6</td><td class="r">6</td><td class="r">9.8%</td><td class="r">30.5%</td><td class="r">1.63倍</td><td class="r">1.04</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率10%で上位争いの一角。内枠を利して後方から。上がり勝負に確かな実績(3/4)、実績上位。これまで大きく崩れていない。オッズ妙味はある。</p><span class="lt">瞬発 3/4</span></td></tr>
+<tr class=""><td class="mk">△◇</td><td class="no">8</td><td class="no">16</td><td class="nm">ラディアントスター<small>牡3 57.0kg 池添 謙一</small></td><td>林 徹</td><td class="r">20.5</td><td class="r">7</td><td class="r">5.4%</td><td class="r">17.7%</td><td class="r">0.95倍</td><td class="r">1.11</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率5%で上位争いの一角。人気を考えれば妙味は大きい。多頭数の外枠、中団から運ぶ形。持続戦に確かな実績(3/3)、地力はメンバー筆頭格。前走の好走から上積みが見込める、久々の一戦、これまで大きく崩れていない。</p><span class="lt">持続 3/3</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">12</td><td class="nm">ラージアンサンブル<small>牡3 57.0kg 岩田 望来</small></td><td>武井 亮</td><td class="r">24.4</td><td class="r">8</td><td class="r">4.0%</td><td class="r">13.2%</td><td class="r">0.71倍</td><td class="r">0.97</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">8</td><td class="no">15</td><td class="nm">エリプティクカーブ<small>牡3 57.0kg 横山 武史</small></td><td>古賀 大生</td><td class="r">24.5</td><td class="r">9</td><td class="r">2.1%</td><td class="r">7.0%</td><td class="r">0.37倍</td><td class="r">0.50</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">7</td><td class="nm">ジャスティンシカゴ<small>牡3 57.0kg 原 優介</small></td><td>宮田 敬介</td><td class="r">34.5</td><td class="r">10</td><td class="r">0.9%</td><td class="r">3.0%</td><td class="r">0.16倍</td><td class="r">0.30</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">4</td><td class="nm">リッツパーティー<small>牡3 57.0kg 丹内 祐次</small></td><td>岩戸 孝樹</td><td class="r">35.3</td><td class="r">11</td><td class="r">1.7%</td><td class="r">5.8%</td><td class="r">0.31倍</td><td class="r">0.60</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">3</td><td class="nm">バドリナート<small>牡3 57.0kg 丸山 元気</small></td><td>松永 幹夫</td><td class="r">51.7</td><td class="r">12</td><td class="r">2.0%</td><td class="r">6.9%</td><td class="r">0.37倍</td><td class="r">1.05</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">ウェイクフィールド<small>牡3 57.0kg 横山 和生</small></td><td>嘉藤 貴行</td><td class="r">57.3</td><td class="r">13</td><td class="r">1.5%</td><td class="r">5.2%</td><td class="r">0.28倍</td><td class="r">0.87</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">11</td><td class="nm">ミリオンクラウン<small>牡3 57.0kg 横山 典弘</small></td><td>和田 雄二</td><td class="r">73.9</td><td class="r">14</td><td class="r">1.0%</td><td class="r">3.4%</td><td class="r">0.18倍</td><td class="r">0.72</td></tr>
+<tr class="dim"><td class="mk">◇</td><td class="no">7</td><td class="no">13</td><td class="nm">フウセン<small>牡3 57.0kg 鮫島 克駿</small></td><td>杉山 晴紀</td><td class="r">89.6</td><td class="r">15</td><td class="r">2.1%</td><td class="r">7.1%</td><td class="r">0.38倍</td><td class="r">1.86</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。多頭数の外枠、後方から運ぶ形。上がり勝負に確かな実績(5/5)、実績上位、人気薄だが力は足りる。前走の好走から上積みが見込める、これまで大きく崩れていない。</p><span class="lt">瞬発 5/5</span></td></tr>
+<tr class="dim"><td class="mk">◇</td><td class="no">7</td><td class="no">14</td><td class="nm">ティラーノ<small>牡3 57.0kg 石橋 脩</small></td><td>小手川 準</td><td class="r">182.4</td><td class="r">16</td><td class="r">0.9%</td><td class="r">3.2%</td><td class="r">0.17倍</td><td class="r">1.70</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。人気を考えれば妙味は大きい。多頭数の外枠、中団から運ぶ形。持続戦の経験あり(1/3)、相手強化で分が悪い。</p><span class="lt">瞬発 1/3</span><span class="lt">持続 1/3</span></td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：M</span><span class="tag">ラップ傾向：—</span><span class="tag v">妙味：◇3頭</span></div>
+<div class="tags"><span class="tag">想定ペース：平均</span><span class="tag v">妙味：◇3頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
 </div>
-<div class="race">
+<div class="race" id="r12">
 <div class="rh"><span class="no">12R</span>3歳以上2勝クラス</div>
-<div class="rsub">2勝クラス / 1800m / ダート / 右 / 13頭</div>
-<div class="pace"><b>想定ペース</b> S<br><b>ラップ傾向</b> 2/3 / — / — / —<br><b>馬場</b> 3/5</div>
-<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>騎手</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
-<tr class="hi"><td class="mk">◎</td><td class="no">5</td><td class="no">7</td><td class="nm">ラストレガシー<small>牡4 58.0kg</small></td><td>岩田 望来</td><td class="r">6.0</td><td class="r">2</td><td class="r">28.7%</td><td class="r">71.6%</td><td class="r">3.10倍</td><td class="r">1.72</td></tr>
-<tr class="cmt"><td></td><td colspan="10">補正後の勝率29%でレース最上位、本命に推す。先行から立ち回れる展開。道悪巧者(3/5)、長く良い脚を使えるのが強み(2/3)、実績上位、鞍上は信頼できる。前走はまずまずの内容、ブリンカーで集中力を補う、これまで大きく崩れていない。人気以上に評価できる。</td></tr>
-<tr class="hi"><td class="mk">○</td><td class="no">4</td><td class="no">4</td><td class="nm">ジェイエルモーダル<small>牡3 55.0kg</small></td><td>田辺 裕信</td><td class="r">3.5</td><td class="r">1</td><td class="r">27.1%</td><td class="r">69.6%</td><td class="r">3.01倍</td><td class="r">0.95</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率27%でレース2番手評価。後方勢にはやや不利な流れ。道悪巧者(3/3)、持続戦に確かな実績(3/3)、地力はメンバー筆頭格、斤量差は有利に働く。前走の好走から上積みが見込める、これまで大きく崩れていない。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">▲</td><td class="no">8</td><td class="no">12</td><td class="nm">コーリンカルベラ<small>牡5 58.0kg</small></td><td>松山 弘平</td><td class="r">7.7</td><td class="r">3</td><td class="r">10.6%</td><td class="r">36.3%</td><td class="r">1.57倍</td><td class="r">0.82</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率11%で3番手だが、展開面はやや割引。後方勢には歓迎しづらい流れ。長く脚を使った経験あり(1/3)、地力は平均的、鞍上は信頼できる。ブリンカーで集中力を補う。オッズ妙味はある。</td></tr>
-<tr class=""><td class="mk">☆</td><td class="no">6</td><td class="no">8</td><td class="nm">カゼノタカトシ<small>牡4 56.0kg</small></td><td>◇ 今村 聖奈</td><td class="r">9.5</td><td class="r">5</td><td class="r">10.2%</td><td class="r">34.9%</td><td class="r">1.51倍</td><td class="r">0.96</td></tr>
-<tr class="cmt"><td></td><td colspan="10">上位陣とは差があり、印は見送り。先行から立ち回れる展開。実績上位。前走はまずまずの内容、これまで大きく崩れていない。</td></tr>
-<tr class=""><td class="mk">△</td><td class="no">7</td><td class="no">11</td><td class="nm">ブレードサクセス<small>牡5 58.0kg</small></td><td>丹内 祐次</td><td class="r">9.4</td><td class="r">4</td><td class="r">5.3%</td><td class="r">19.3%</td><td class="r">0.84倍</td><td class="r">0.50</td></tr>
-<tr class="cmt"><td></td><td colspan="10">勝率5%で上位争いの一角、展開次第で浮上も。ハナから展開に恵まれ、ペース適性も後押しする。実績上位。ブリンカーで集中力を補う。人気を考えるとやや割高。</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">6</td><td class="no">9</td><td class="nm">ナイトスラッガー<small>牡5 58.0kg</small></td><td>横山 武史</td><td class="r">10.6</td><td class="r">6</td><td class="r">4.0%</td><td class="r">15.0%</td><td class="r">0.65倍</td><td class="r">0.43</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">6</td><td class="nm">バードウォッチャー<small>牡5 58.0kg</small></td><td>岩田 康誠</td><td class="r">11.1</td><td class="r">7</td><td class="r">3.1%</td><td class="r">11.6%</td><td class="r">0.50倍</td><td class="r">0.34</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">コスモコンフェルマ<small>牡4 58.0kg</small></td><td>柴田 大知</td><td class="r">12.8</td><td class="r">8</td><td class="r">2.1%</td><td class="r">8.0%</td><td class="r">0.35倍</td><td class="r">0.27</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">ニシノケンタマン<small>牡4 58.0kg</small></td><td>野中 悠太郎</td><td class="r">13.9</td><td class="r">9</td><td class="r">2.3%</td><td class="r">8.7%</td><td class="r">0.38倍</td><td class="r">0.32</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">10</td><td class="nm">ブレゲアン<small>牡4 58.0kg</small></td><td>大野 拓弥</td><td class="r">24.4</td><td class="r">10</td><td class="r">2.5%</td><td class="r">9.6%</td><td class="r">0.42倍</td><td class="r">0.62</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">5</td><td class="nm">メイショウリリー<small>牝5 56.0kg</small></td><td>横山 琉人</td><td class="r">27.1</td><td class="r">11</td><td class="r">1.6%</td><td class="r">6.2%</td><td class="r">0.27倍</td><td class="r">0.44</td></tr>
-<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">2</td><td class="nm">ハイラント<small>せん5 58.0kg</small></td><td>内田 博幸</td><td class="r">30.1</td><td class="r">12</td><td class="r">2.1%</td><td class="r">7.8%</td><td class="r">0.34倍</td><td class="r">0.62</td></tr>
-<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">13</td><td class="nm">サザンウォリアー<small>牡3 54.0kg</small></td><td>☆ 長浜 鴻緒</td><td class="r">48.4</td><td class="r">13</td><td class="r">0.3%<span class="ref">*</span></td><td class="r">1.3%<span class="ref">*</span></td><td class="r">0.06倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
+<div class="meta">2勝クラス / 1800m / ダート / 右 / 13頭</div>
+<div><span class="pill">想定ペース スロー</span><span class="pill lap">ラップ傾向 標準・平坦</span><span class="pill lap">流れ 標準 64%</span><span class="pill lap">上がり 12.66秒/F</span><span class="pill">n=231</span></div>
+<table><tr><th>印</th><th>枠</th><th>馬番</th><th>馬名</th><th>調教師</th><th class="r">単勝</th><th class="r">人気</th><th class="r">勝率</th><th class="r">複勝率</th><th class="r">平均比</th><th class="r">期待値</th></tr>
+<tr class="hi"><td class="mk">◎</td><td class="no">5</td><td class="no">7</td><td class="nm">ラストレガシー<small>牡4 58.0kg 岩田 望来</small></td><td>手塚 貴久</td><td class="r">5.1</td><td class="r">2</td><td class="r">28.9%</td><td class="r">71.5%</td><td class="r">3.10倍</td><td class="r">1.47</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">補正後の勝率29%でレース最上位、本命に推す。先行から立ち回れる展開。道悪巧者(3/5)、長く良い脚を使えるのが強み(2/3)、実績上位、鞍上は信頼できる。前走はまずまずの内容、ブリンカーで集中力を補う、これまで大きく崩れていない。人気以上に評価できる。</p><span class="lt">ロンスパ 2/3</span><span class="lt bb">道悪 3/5</span></td></tr>
+<tr class="hi"><td class="mk">○</td><td class="no">4</td><td class="no">4</td><td class="nm">ジェイエルモーダル<small>牡3 55.0kg 田辺 裕信</small></td><td>松尾 卓哉</td><td class="r">3.1</td><td class="r">1</td><td class="r">27.2%</td><td class="r">69.4%</td><td class="r">3.01倍</td><td class="r">0.84</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率27%でレース2番手評価。後方勢にはやや不利な流れ。道悪巧者(3/3)、持続戦に確かな実績(3/3)、地力はメンバー筆頭格、斤量差は有利に働く。前走の好走から上積みが見込める、これまで大きく崩れていない。</p><span class="lt">持続 3/3</span><span class="lt bb">道悪 3/3</span></td></tr>
+<tr class=""><td class="mk">▲</td><td class="no">6</td><td class="no">9</td><td class="nm">ナイトスラッガー<small>牡5 58.0kg 横山 武史</small></td><td>小手川 準</td><td class="r">8.6</td><td class="r">3</td><td class="r">9.8%</td><td class="r">33.8%</td><td class="r">1.46倍</td><td class="r">0.84</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率10%で3番手だが、展開面はやや割引。後方勢には歓迎しづらい流れ。上がり勝負の経験あり(1/6)、地力は平均的、鞍上は信頼できる。前走の好走から上積みが見込める。オッズ妙味はある。</p><span class="lt">瞬発 1/6</span><span class="lt">加速 1/4</span></td></tr>
+<tr class=""><td class="mk">☆</td><td class="no">6</td><td class="no">8</td><td class="nm">カゼノタカトシ<small>牡4 56.0kg ◇ 今村 聖奈</small></td><td>久保田 貴士</td><td class="r">10.0</td><td class="r">6</td><td class="r">6.9%</td><td class="r">24.7%</td><td class="r">1.07倍</td><td class="r">0.69</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">上位陣とは差があり、印は見送り。先行から立ち回れる展開。実績上位。前走はまずまずの内容、これまで大きく崩れていない。人気を考えるとやや割高。</p></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">7</td><td class="no">11</td><td class="nm">ブレードサクセス<small>牡5 58.0kg 丹内 祐次</small></td><td>岩戸 孝樹</td><td class="r">9.5</td><td class="r">4</td><td class="r">5.3%</td><td class="r">19.4%</td><td class="r">0.84倍</td><td class="r">0.50</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率5%で上位争いの一角、展開次第で浮上も。ハナから展開に恵まれ、ペース適性も後押しする。実績上位。ブリンカーで集中力を補う。人気を考えるとやや割高。</p></td></tr>
+<tr class=""><td class="mk">△</td><td class="no">8</td><td class="no">12</td><td class="nm">コーリンカルベラ<small>牡5 58.0kg 松山 弘平</small></td><td>小野 次郎</td><td class="r">9.6</td><td class="r">5</td><td class="r">6.8%</td><td class="r">24.3%</td><td class="r">1.05倍</td><td class="r">0.65</td></tr>
+<tr class="ex"><td></td><td colspan="10"><p class="cmt">勝率7%で上位争いの一角。後方勢には歓迎しづらい流れ。長く脚を使った経験あり(1/3)、地力は平均的、鞍上は信頼できる。ブリンカーで集中力を補う。</p><span class="lt">ロンスパ 1/3</span></td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">3</td><td class="no">3</td><td class="nm">ニシノケンタマン<small>牡4 58.0kg 野中 悠太郎</small></td><td>深山 雅史</td><td class="r">12.3</td><td class="r">7</td><td class="r">4.8%</td><td class="r">17.5%</td><td class="r">0.76倍</td><td class="r">0.59</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">5</td><td class="no">6</td><td class="nm">バードウォッチャー<small>牡5 58.0kg 岩田 康誠</small></td><td>中舘 英二</td><td class="r">14.2</td><td class="r">8</td><td class="r">2.1%</td><td class="r">7.9%</td><td class="r">0.34倍</td><td class="r">0.30</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">1</td><td class="no">1</td><td class="nm">コスモコンフェルマ<small>牡4 58.0kg 柴田 大知</small></td><td>鈴木 慎太郎</td><td class="r">21.1</td><td class="r">9</td><td class="r">1.7%</td><td class="r">6.5%</td><td class="r">0.28倍</td><td class="r">0.36</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">7</td><td class="no">10</td><td class="nm">ブレゲアン<small>牡4 58.0kg 大野 拓弥</small></td><td>中舘 英二</td><td class="r">24.0</td><td class="r">10</td><td class="r">2.6%</td><td class="r">9.6%</td><td class="r">0.42倍</td><td class="r">0.61</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">4</td><td class="no">5</td><td class="nm">メイショウリリー<small>牝5 56.0kg 横山 琉人</small></td><td>高橋 義忠</td><td class="r">32.5</td><td class="r">11</td><td class="r">1.6%</td><td class="r">6.2%</td><td class="r">0.27倍</td><td class="r">0.53</td></tr>
+<tr class="dim"><td class="mk nb">—</td><td class="no">2</td><td class="no">2</td><td class="nm">ハイラント<small>せん5 58.0kg 内田 博幸</small></td><td>伊藤 大士</td><td class="r">33.8</td><td class="r">12</td><td class="r">2.1%</td><td class="r">7.8%</td><td class="r">0.34倍</td><td class="r">0.70</td></tr>
+<tr class=""><td class="mk nb">実不</td><td class="no">8</td><td class="no">13</td><td class="nm">サザンウォリアー<small>牡3 54.0kg ☆ 長浜 鴻緒</small></td><td>加藤 和宏</td><td class="r">56.3</td><td class="r">13</td><td class="r">0.3%<span class="ref">*</span></td><td class="r">1.3%<span class="ref">*</span></td><td class="r">0.06倍</td><td class="r"><span class="ref">評価不可</span></td></tr>
 </table>
-<div class="tags"><span class="tag">想定ペース：S</span><span class="tag">ラップ傾向：2/3</span></div>
-</div><footer>＊印は「実績不足」の馬を参考値として表示（キャリア1〜2戦は推定精度が低く、印の対象外）。<br>人気は当日の単勝オッズ順（発走前の変動あり）。平均比＝複勝率÷同条件の平均値。<br>期待値は単勝ベース。算出に必要な実績が足りない馬は「評価不可」と表示。<br>本命◎の的中率は直近集計で約31%（市場1番人気とほぼ同水準）。<br>生成 2026-09-12 16:05 / データ 20260913</footer><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/keiba-card/sw.js'));}</script></body></html>
+<div class="tags"><span class="tag">想定ペース：スロー</span><span class="tag">実績不足：1頭</span></div>
+<a class="top" href="#top">▲ レース一覧へ</a>
+</div></div><footer>＊は「実績不足」（キャリアが浅く推定精度が低い馬）。印の対象外ですが数値は参考表示。<br>人気・単勝は取得時点のオッズ順（発走前に変動します）。<br>複勝率はHarville法による推定。平均比＝複勝率÷同条件の平均。<br>期待値は単勝ベース。算出に足る実績が無い馬は「評価不可」。<br>ロンスパ／瞬発／持続／加速・道悪は、その馬の該当条件での着度数（3着内/出走）。<br>本命◎の的中率は直近集計で約31%（市場1番人気とほぼ同水準）。<br>生成 2026-09-13 01:31 / データ 20260913</footer><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/keiba-card/sw.js'));}</script></body></html>
