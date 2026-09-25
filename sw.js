@@ -1,5 +1,5 @@
 
-const CACHE = 'keiba-202609260117';
+const CACHE = 'keiba-202609260123';
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k))))
